@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+	font-family: Helvetica;
+
+}
+
+
+/* NAVBAR SECTIONS */
+.content-wrapper{
+  background-color: #ffffff;
+}
+
+.main-header{
+  background-color: #a91414;
+
+}
+
+#pushmenu{
+  color: #ffffff;
+}
+
+#fullscreen{
+  color: #ffffff;
+}
+
+/* NAVBAR SECTIONS END*/
+
+
+/* ADMIN EDIT PROFILE PICTURE */
+.profile-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.btn-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* SIDEBAR PROFILE */
+#profile-image img{
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+}
+.info a{
+  margin-top: 10px;
+}
+
+/* SIDEBAR PROFILE END */
+
+
+/* QR CODE GALLERY SECTION */
+
+.container#qr-code{
+  display: flex;
+  width: 30%;
+  }
+
+.card-header {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+.card-header{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Helvetica;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* QR CODE GALLERY SECTION END*/
+
+/* EVSU COLORS APPLIED */
+
+.card-header{
+  background-color: #F5F5F5;
+}
+
+/* EVSU COLORS APPLIED END*/
+
+
+/* BUTTON COLOR */
+#save{
+  background-color: #b31616;
+}
+#edit{
+  background-color: #00c0ef;
+}
+
+#add{
+  background-color: #00c0ef;
+}
+
+#btn-badge{
+  background-color: #00c0ef;
+}
+
+
+#edit-profile{
+  background-color: #f39c12;
+
+}
+/* BUTTON COLOR END*/
+
+
+/* SMALL BOX */
+#box1{
+  background-color: #f39c12;
+  border-bottom: 5px solid #d6880c;
+}
+
+#box2{
+  background-color: #00c0ef;
+  border-bottom: 5px solid #0d9bbd;
+}
+
+/* SMALL BOX END */
+
+
+
+
+
+
+/* 720 pexel realme5 */
+@media only screen and (max-width: 720px){
+    #btn-menu .btn{
+        width: 6.7rem;
+    }
+  #btn-menu a{
+    margin-bottom: 5px;
+
+  }
+
+  #card-qr{
+    max-width: 100%;
+  }
+  .inner h4{
+    font-size: 16px;
+  }
+  .container#qr-code{
+    width: 90%;
+    display:flex;
+    }
+}
