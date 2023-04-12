@@ -35,12 +35,9 @@ if (isset($_POST['submit'])) {
 
     // IF STATEMENT IS EQUAL TO ONE 
     if ($count == 1) {
-        $_SESSION['email'] = $email;
-        $_SESSION['firstname'] = $firstname;
-        $_SESSION['lastname'] = $lastname;
-        $_SESSION['username'] = $username;
-      
 
+        //  STORE THE DATA IN THE SESSION
+        $_SESSION['email'] = $email;
 
         // WILL GO TO THIS FOLDER GUEST_SIGNUP
         

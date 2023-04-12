@@ -19,14 +19,6 @@ if (isset($_POST['submit'])) {
      $reg_id = $row['UserID'];
      $email_ad = $row['email'];
 
-     // Store the Data in session
-     $_SESSION['IDnumber'] = $idnumber;
-     $_SESSION['firstname'] = $firstname;
-     $_SESSION['lastname'] = $lastname;
-     $_SESSION['email'] = $email;
-     $_SESSION['course'] = $course;
-     $_SESSION['department'] = $depart; 
-       
     } else {
         echo "error";
     }

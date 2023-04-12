@@ -34,12 +34,9 @@ if (isset($_POST['submit'])) {
 
     // IF STATEMENT IS EQUAL TO ONE 
     if ($count == 1) {
+        
+        //  STORE THE DATA IN THE SESSION
         $_SESSION['IDnumber'] = $idnumber;
-        $_SESSION['firstname'] = $firstname;
-        $_SESSION['lastname'] = $lastname;
-        $_SESSION['email'] = $email;
-        $_SESSION['course'] = $course;
-        $_SESSION['department'] = $depart;
 
         // WILL GO TO THIS FOLDER STUDENT_SIGNUP
         $_SESSION['validate'] = "successful";

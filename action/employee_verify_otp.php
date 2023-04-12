@@ -34,11 +34,10 @@ if (isset($_POST['submit'])) {
 
     // IF STATEMENT IS EQUAL TO ONE 
     if ($count == 1) {
+        //  STORE THE DATA IN THE SESSION
         $_SESSION['IDnumber'] = $idnumber;
-        $_SESSION['firstname'] = $firstname;
-        $_SESSION['lastname'] = $lastname;
-        $_SESSION['email'] = $email;
-        $_SESSION['department'] = $depart;
+
+        
         // WILL GO TO THIS FOLDER EMPLOYEE_SIGNUP
         $_SESSION['validate'] = "successful";
         header("location: .?page=employee_signup");
