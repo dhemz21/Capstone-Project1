@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $idnumber = $_POST['IDnumber'];
 
     // RETRIEVE THE EMAIL ADDRESS FOR THE GIVEN SPECIFIC IDNUMBER
-    $validate = "SELECT email FROM registered_users WHERE IDnumber = '$idnumber'";
+    $validate = "SELECT * FROM registered_users WHERE IDnumber = '$idnumber'";
     $result = mysqli_query($conn, $validate);
 
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     // GETTING THE SPECIFIC ROW FROM THE REGISTERED_USERS WHICH IS THE USER_ID AND INSERT TO TABLE RESET_PASSWORD_TOKEN
      $email_ad = $row['email'];
 
-    // Store the Data in session
+    // SOTRE THE DATA IN THE SESSION
     $_SESSION['IDnumber'] = $idnumber;
        
     } else {

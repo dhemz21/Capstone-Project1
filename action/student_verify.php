@@ -34,6 +34,7 @@ if (isset($_POST['submit'])) {
     // IF STATEMENT IS EQUAL TO ONE 
     if ($count == 1) {
 
+        // STORE THE DATA IN THE SESSION 
         $_SESSION['IDnumber'] = $idnumber;
 
         $_SESSION['validate'] = "successful";
