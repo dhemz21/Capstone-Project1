@@ -63,8 +63,11 @@ include_once('action/display-profile.php');
                 <label for="lname">Lastname</label>
                 <input type="text" class="form-control rounded-0 " name="Lastname" value="<?php echo $getData['Lastname']; ?>">
               </div>
-
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-6">
+                <label for="lname">Department</label>
+                <input type="text" class="form-control rounded-0 " name="depart" value="<?php echo $getData['Department']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
                 <label for="password">Current Password</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
