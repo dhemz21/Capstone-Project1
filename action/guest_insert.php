@@ -61,12 +61,14 @@ if (isset($_POST['submit'])) {
 	if ($count > 0) {
 
 		$_SESSION['validate'] = "existed";
-        header("location: .?page=guest_signup");
+        header("location: .?pag0e=guest_signup");
 
 	} else {
 				// IT WILL GENERATE YOUR QR CODE AFTER SIGNING UP 
 				$path = 'qrcodes-images/';
-				$username_encrypt = md5($_POST['username']) . md5($_POST['password']);
+				// $username_encrypt = md5($_POST['username']) . md5($_POST['password']);
+				$username_encrypt = substr(md5($_POST['username']) . md5($_POST['password']), 0, 20);
+
 				$qrIDText = "$username" . "-" . "$username_encrypt";
 		
 				$file = $path . $qrIDText . ".png";
