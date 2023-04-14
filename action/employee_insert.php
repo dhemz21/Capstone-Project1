@@ -68,8 +68,7 @@ if (isset($_POST['submit'])) {
 				// IT WILL GENERATE YOUR QR CODE AFTER SIGNING UP 
 				$path = 'qrcodes-images/';
 				// $idnumber_encrypt = md5($_POST['IDnumber']) . md5($_POST['password']);
-				$username_encrypt = substr(md5($_POST['username']) . md5($_POST['password']), 0, 20);
-
+				$idnumber_encrypt = substr(md5($_POST['IDnumber']) . md5($_POST['password']), 0, 20);
 				$qrIDText = "$idnumber" . "-" . "$idnumber_encrypt";
 		
 				$file = $path . $qrIDText . ".png";
