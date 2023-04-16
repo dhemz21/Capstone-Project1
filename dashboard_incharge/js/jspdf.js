@@ -93,7 +93,7 @@ function addTable(doc, table) {
   }
   doc.autoTable({
     startY: 205,
-    head: [['Lastname', 'Firstname', 'Type', 'Date']],
+    head: [['Lastname', 'Firstname', 'Type', 'Time In']],
     headStyles: {
       fillColor: [183, 28, 28], // set table header background color to maroon
       textColor: [255, 255, 255] // set table header font color to white
