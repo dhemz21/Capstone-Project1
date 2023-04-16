@@ -43,12 +43,16 @@ if (isset($_POST['submit'])) {
         
         $_SESSION['validate'] = "successful";
         header("location: .?page=guest_signup");
+        exit(); // Stop further PHP execution
+
 
        
     } else {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=guest_otp");
+        exit(); // Stop further PHP execution
+
     }
 
 }

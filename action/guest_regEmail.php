@@ -49,6 +49,8 @@ if (isset($_POST['submit'])) {
         if (mysqli_query($conn, $sql)) {
             // IT WILL GO TO THIS FOLDER
             header("location: .?folder=pages/&page=guest_otp");
+            exit(); // Stop further PHP execution
+
         } else {
             $_SESSION['validate'] = "unsuccessful";
         }
@@ -57,6 +59,8 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=guest_verify");
+        exit(); // Stop further PHP execution
+
     }
 }
 

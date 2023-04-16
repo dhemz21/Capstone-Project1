@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if(isset($_POST['submit'])){
@@ -40,15 +39,17 @@ if(isset($_POST['submit'])){
                     $userID = $_SESSION['UserID'] = $getData['UserID'];
                     $type = $_SESSION['type'] = $getData['type'];
                     header("location: dashboard_incharge/");
+                    exit(); // Stop further PHP execution
                 } else {
                     $_SESSION['validate'] = "unsuccessful";
                     header("location: .?page=incharge_login");
+                    exit(); // Stop further PHP execution
                 }      
         }
     }else{
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=incharge_login");
-
+        exit(); // Stop further PHP execution
     }
 }
 ?>

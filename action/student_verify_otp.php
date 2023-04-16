@@ -41,12 +41,16 @@ if (isset($_POST['submit'])) {
         // WILL GO TO THIS FOLDER STUDENT_SIGNUP
         $_SESSION['validate'] = "successful";
         header("location: .?page=student_signup");
+        exit(); // Stop further PHP execution
+
 
        
     } else {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=student_otp");
+        exit(); // Stop further PHP execution
+
     }
 
 }

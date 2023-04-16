@@ -43,19 +43,23 @@ if(isset($_POST['submit'])){
                     $depart = $_SESSION['Department'] = $getData['Department'];
                     $type = $_SESSION['login_type'] = $getData['login_type'];
                     header("location: dashboard_student/");
+                    exit(); // Stop further PHP execution
                 } else {
                     $_SESSION['validate'] = "unsuccessful";
                     header("location: .?page=student_login");
+                    exit(); // Stop further PHP execution
                 }
             } else {
                 $_SESSION['validate'] = "no-access";
                 header("location: .?page=student_computer_login");
+                exit(); // Stop further PHP execution
             }
            
         }
     }else{
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=student_login");
+        exit(); // Stop further PHP execution
 
     }
 }

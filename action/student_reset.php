@@ -50,6 +50,8 @@ if (isset($_POST['submit'])) {
             // IT WILL GO TO THIS FOLDER
             $_SESSION['validate'] = "successful";
             header("location: .?folder=pages/&page=student_token");
+            exit(); // Stop further PHP execution
+
         } else {
             $_SESSION['validate'] = "unsuccessful";
         }
@@ -58,6 +60,8 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=student_forgot");
+        exit(); // Stop further PHP execution
+
     }
 }
 ?>

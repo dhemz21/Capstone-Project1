@@ -42,19 +42,25 @@ if(isset($_POST['submit'])){
                     $depart = $_SESSION['Department'] = $getData['Department'];
                     $type = $_SESSION['login_type'] = $getData['login_type'];
                     header("location: dashboard_employee/");
+                    exit(); // Stop further PHP execution
                 } else {
                     $_SESSION['validate'] = "unsuccessful";
                     header("location: .?page=employee_login");
+                    exit(); // Stop further PHP execution
+
                 }
             }else{
                 $_SESSION['validate'] = "not-employee";
                 header("location: .?page=employee_login");
+                exit(); // Stop further PHP execution
+
             }
 
         }
     }else{
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=employee_login");
+        exit(); // Stop further PHP execution
 
     }
 }

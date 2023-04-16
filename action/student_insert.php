@@ -57,6 +57,8 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=student_signup");
+		exit(); // Stop further PHP execution
+
 		exit;
 	}
 
@@ -78,6 +80,8 @@ if (isset($_POST['submit'])) {
 		
 		$_SESSION['validate'] = "existed";
         header("location: .?page=student_signup");
+		exit(); // Stop further PHP execution
+
 	} else {
 			
 		
@@ -95,11 +99,11 @@ if (isset($_POST['submit'])) {
 
 
 		header("Location: .?page=student_login");
+		exit(); // Stop further PHP execution
+
 	} else {
 		echo "Error: " . $sql . "" . mysqli_error($conn);
 	}
-
-
 
 	//close connection
 	mysqli_close($conn);

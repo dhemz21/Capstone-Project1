@@ -39,12 +39,16 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['validate'] = "successful";
         header("location: .?page=employee_reset");
+        exit(); // Stop further PHP execution
+
 
        
     } else {
 
         $_SESSION['validate'] = "unsuccessful";
         header("location: .?page=employee_token");
+        exit(); // Stop further PHP execution
+
     }
 
 }

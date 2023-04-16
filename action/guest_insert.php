@@ -62,6 +62,8 @@ if (isset($_POST['submit'])) {
 
 		$_SESSION['validate'] = "existed";
         header("location: .?pag0e=guest_signup");
+		exit(); // Stop further PHP execution
+
 
 	} else {
 				// IT WILL GENERATE YOUR QR CODE AFTER SIGNING UP 
@@ -90,6 +92,8 @@ if (isset($_POST['submit'])) {
 		$_SESSION['userID'] = $totalID;
 
 		header("Location: .?page=guest_login");
+		exit(); // Stop further PHP execution
+
 	} else {
 		echo "Error: " . $sql . "" . mysqli_error($conn);
 	}

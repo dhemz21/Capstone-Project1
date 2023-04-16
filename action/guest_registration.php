@@ -38,6 +38,8 @@ if (isset($_POST['submit'])) {
 
 		$_SESSION['validate'] = "existed";
         header("location: .?page=guest_register");
+		exit(); // Stop further PHP execution
+
 
 	} else {
     
@@ -52,6 +54,8 @@ if (isset($_POST['submit'])) {
 
 		$_SESSION['validate'] = "successful";
         header("location: .?page=guest_verify");
+		exit(); // Stop further PHP execution
+
 	} else {
 		echo "Error: " . $sql . "" . mysqli_error($conn);
 	}
