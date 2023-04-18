@@ -145,7 +145,7 @@ function addTitle(doc){
     var leftMargin = 40; // set the left margin to 40 units
     var bottomMargin = 20; // set the bottom margin to 20 units
     var dateX = leftMargin;
-    var dateY = thirdTitleY + 25;
+    var dateY = thirdTitleY + 90;
     doc.setFontSize(dateFontSize);
     doc.setTextColor(0, 0, 0); // set title color to black
     doc.text(formattedDate, dateX, dateY);
@@ -160,7 +160,7 @@ function addMeeting(doc){
   var venue = 'Venue: ' + '<?php echo strtoupper($row["venue"]); ?>'; // Replace with your column name
 
   var leftMargin = 40;
-  var topMargin = 215;
+  var topMargin = 200;
   var titleFontSize = 12;
   doc.setFont('Helvetica');
   doc.setFontSize(12);
