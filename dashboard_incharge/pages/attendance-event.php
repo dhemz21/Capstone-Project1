@@ -68,6 +68,12 @@ require_once("../database/db_conn.php");
   <script src="js/delete_record.js"></script>
 
   <script>
+    setTimeout(function(){
+    location.reload();
+  }, 10000);
+   </script>
+
+  <script>
      // Attach click event to the Generate PDF button
 document.getElementById('generate').addEventListener('click', function() {
   var table = document.getElementById("example1");

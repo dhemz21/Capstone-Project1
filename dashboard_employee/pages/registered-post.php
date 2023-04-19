@@ -59,6 +59,13 @@ require_once("../database/db_conn.php");
 <!-- /.content -->
 
 <script>
+    setTimeout(function(){
+    location.reload();
+  }, 10000);
+   </script>
+
+
+<script>
         $(function() {
             $("#example1").DataTable({
                 "responsive": true,
