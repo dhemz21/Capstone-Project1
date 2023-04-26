@@ -23,7 +23,6 @@ $totalID = $totalID + 1;
 if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
-	$idnumber = $_POST['IDnumber'];
 	$fname = $_POST['firstname'];
 	$lname = $_POST['lastname'];
 	$mail = $_POST['email'];

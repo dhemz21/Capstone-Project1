@@ -2,6 +2,7 @@
 session_start();
 // DATABASE CONNECTION
 require_once('database/db_conn.php');
+//IT WILL PROCESS AND AFTER IT SEND THE OTP 
 
 if (isset($_POST['submit'])) {
 
@@ -40,9 +41,9 @@ if (isset($_POST['submit'])) {
 
         // THE DATA FROM TBL_STUDENT WILL STORE TO REGISTERED_IDNUMBER TABLE
         $sql = "INSERT INTO registered_idnumber (Registered_ID, IDnumber, email, OTP, login_type)VALUES ('$reg_id', '$idnumber', '$email_ad', '$OTP_code', 'STUDENT')";
-
-        //IT WILL PROCESS AND AFTER IT SEND THE OTP 
-        include 'pages/student_send_otp.php';
+        
+       //IT WILL PROCESS AND AFTER IT SEND THE OTP 
+       include 'pages/student_send_otp.php';
 
         // CHECKING IF INSERTION IS SUCCESSFUL FROM REGISTERED_IDNUMBER 
         if (mysqli_query($conn, $sql)) {
