@@ -23,7 +23,7 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = 587;                        // TCP port to connect t					
 $mail->setFrom('evsu.system23@gmail.com', 'Evsu System');
 $mail->From = 'evsu.system23@gmail.com';
-$mail->FromName = 'AIMS SYSTEM';
+$mail->FromName = 'EVSU SYSTEM';
 $mail->addAddress('evsu.system23@gmail.com');   // Add a recipient
 $mail->AddCC($email, $user);
 
@@ -42,11 +42,11 @@ $bodyContent .= "<h4>For your protection, do not share this code with anyone</h4
 $bodyContent .= "</body>";
 $bodyContent .= "</html>";
 
-$mail->Subject = 'AIMS SYSTEM';
+$mail->Subject = 'OTP CODE';
 $mail->Body    = $bodyContent;
 $mail->AltBody = "This is the plain text version of the email content";
 
 if (!$mail->send()) {
-	header('location: ./student_login.php');
+	header('location: ./guest_login.php');
 }
 
