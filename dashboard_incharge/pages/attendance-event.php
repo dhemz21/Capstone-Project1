@@ -121,7 +121,7 @@ function addTitle(doc){
 
   // Add second title below the first one
   var secondTitle = 'Eastern Visayas State University Ormoc City Campus ';
-  var secondTitleFontSize = 14;
+  var secondTitleFontSize = 16;
   var secondTitleWidth = doc.getStringUnitWidth(secondTitle.toUpperCase()) * secondTitleFontSize / doc.internal.scaleFactor;
   var secondTitleX = (doc.internal.pageSize.width - secondTitleWidth) / 2;
   var secondTitleY = titleY + 25;
@@ -129,19 +129,6 @@ function addTitle(doc){
   doc.setTextColor(225, 0, 0); // set title color to black
   doc.text(secondTitle.toUpperCase(), secondTitleX, secondTitleY);
   doc.setFont('Helvetica');
-
-
-  // Add second title below the second one
-  var thirdTitle = 'Attendance Report';
-  var thirdTitleFontSize = 12;
-  var thirdTitleWidth = doc.getStringUnitWidth(thirdTitle.toUpperCase()) * thirdTitleFontSize / doc.internal.scaleFactor;
-  var thirdTitleX = (doc.internal.pageSize.width - thirdTitleWidth) / 2;
-  var thirdTitleY = titleY + 70;
-  doc.setFontSize(thirdTitleFontSize);
-  doc.setTextColor(0, 0, 0); // set title color to black
-  doc.text(thirdTitle.toUpperCase(), thirdTitleX, thirdTitleY);
-  doc.setFont('Helvetica');
-
 
     // Add date below the second title
     var date = new Date().toLocaleDateString();
@@ -151,12 +138,23 @@ function addTitle(doc){
     var leftMargin = 40; // set the left margin to 40 units
     var bottomMargin = 20; // set the bottom margin to 20 units
     var dateX = leftMargin;
-    var dateY = thirdTitleY + 90;
+    var dateY = titleY + 140;
     doc.setFontSize(dateFontSize);
     doc.setTextColor(0, 0, 0); // set title color to black
     doc.text(formattedDate, dateX, dateY);
     doc.setFont('Helvetica');
     doc.setFontSize(10);
+
+    var thirdTitle = 'Attendance Report';
+    var thirdTitleFontSize = 12;
+    var thirdTitleWidth = doc.getStringUnitWidth(thirdTitle.toUpperCase()) * thirdTitleFontSize / doc.internal.scaleFactor;
+    var thirdTitleX = (doc.internal.pageSize.width - thirdTitleWidth) / 2;
+    var thirdTitleY = titleY + 170;
+    doc.setFontSize(thirdTitleFontSize);
+    doc.setTextColor(0,0,0)
+    doc.text(thirdTitle.toUpperCase(), thirdTitleX, thirdTitleY);
+    doc.setFont('Helvetica');
+
 }
 
 function addMeeting(doc){
@@ -166,7 +164,7 @@ function addMeeting(doc){
   var venue = 'Venue: ' + '<?php echo strtoupper($row["venue"]); ?>'; // Replace with your column name
 
   var leftMargin = 40;
-  var topMargin = 200;
+  var topMargin = 180;
   var titleFontSize = 12;
   doc.setFont('Helvetica');
   doc.setFontSize(12);
