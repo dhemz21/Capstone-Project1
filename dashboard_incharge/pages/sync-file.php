@@ -9,20 +9,20 @@
             <form  method="post" action=".?folder=action/&page=sync-file" novalidate>
             <div class="btn btn-danger mt-5 mb-3" onclick="syncData()">Sync now</div>
             <?php
-// Read the scanned data from the JSON file
-$data = json_decode(file_get_contents('action/scanned_data.json'), true);
+            // Read the scanned data from the JSON file
+            $data = json_decode(file_get_contents('action/scanned_data.json'), true);
 
-// Check if the $data variable is not null or empty
-if ($data && is_array($data)) {
-    // Get the count of saved data
-    $count = count($data);
+            // Check if the $data variable is not null or empty
+            if ($data && is_array($data)) {
+                // Get the count of saved data
+                $count = count($data);
 
-    // Display the count inside the card
-    echo "<h5>Saved data: " . $count . "</h5>";
-} else {
-    echo "<h5>No data found!</h5>";
-}
-?>
+                // Display the count inside the card
+                echo "<h5>Saved data: " . $count . "</h5>";
+            } else {
+                echo "<h5>No data found!</h5>";
+            }
+            ?>
                     
             </form>
         </div>
