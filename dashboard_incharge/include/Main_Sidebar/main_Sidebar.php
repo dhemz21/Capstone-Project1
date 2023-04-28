@@ -65,7 +65,13 @@
                 <i class="far fa-circle nav-icon"></i>
                 <p>Event Scanner</p>
               </a>
-            </li>                   
+            </li>     
+            <li class="nav-item">
+              <a href=".?page=sync-file" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Upload File</p>
+              </a>
+            </li>               
       </ul>
 
         <li class="nav-item">

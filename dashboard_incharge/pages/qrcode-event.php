@@ -34,7 +34,22 @@
             Swal.fire({
                 icon: 'success',
                 title: 'Successful',
-                text: 'You successfully registered!'
+                text: 'You successfully registered online!'
+            })
+        </script>
+    <?php
+        unset($_SESSION['validate']);
+    }
+    ?>
+
+<?php
+    if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'offline-successful') {
+    ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Successful',
+                text: 'No internet! Your data has been saved locally'
             })
         </script>
     <?php
@@ -45,6 +60,21 @@
     
 <?php
   if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'existed') {
+  ?>
+    <script>
+      Swal.fire({
+        icon: 'error',
+        title: 'Data Existed ',
+        text: 'User is already existed!'
+      })
+    </script>
+  <?php
+    unset($_SESSION['validate']);
+  }
+  ?>
+
+<?php
+  if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'offline-existed') {
   ?>
     <script>
       Swal.fire({
