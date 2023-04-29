@@ -149,7 +149,7 @@ session_start();
       Swal.fire({
         icon: 'success',
         title: 'Verified ',
-        text: 'Your student Account is verified!'
+        text: 'Your Student Account is verified!'
       })
     </script>
   <?php
@@ -165,7 +165,7 @@ session_start();
       Swal.fire({
         icon: 'error',
         title: 'Data Existed ',
-        text: 'User is already existed please check your information!'
+        text: 'User is already existed, Please check your information!'
       })
     </script>
   <?php

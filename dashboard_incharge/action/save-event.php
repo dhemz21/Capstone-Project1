@@ -1,4 +1,9 @@
 <?php
+
+// Set the time limit to 300 seconds (5 minutes)
+set_time_limit(200);
+
+
 // DATABASE CONNECTION 
 require_once('../database/db_conn.php');
 include_once('pages/send-post-email.php');

@@ -38,7 +38,7 @@ require_once("../database/db_conn.php");
                   <td><?php echo $getData['subject']; ?></td>
                   <td><?php echo $getData['venue']; ?></td>
                   <td><?php echo $getData['description']; ?></td>
-                  <td><a href="../dashboard_admin/files/<?php echo $getData['file']; ?>" target="_blank"><?php echo basename($getData['file']); ?></a></td>
+                  <td><a href="../dashboard_incharge/files/<?php echo $getData['file']; ?>" target="_blank"><?php echo basename($getData['file']); ?></a></td>
                   <td><?php echo $getData['date']; ?></td>  
                 </tr>
               <?php } ?>

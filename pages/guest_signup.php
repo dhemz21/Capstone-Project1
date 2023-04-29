@@ -139,7 +139,7 @@ session_start();
       Swal.fire({
         icon: 'success',
         title: 'Verified ',
-        text: 'Your guest Account is verified!'
+        text: 'Your Guest Account is verified!'
       })
     </script>
   <?php

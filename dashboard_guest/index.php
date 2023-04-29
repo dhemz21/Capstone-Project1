@@ -6,7 +6,7 @@ session_start();
 
 // if(isset($_SESSION['IDnumber'])==0)  
 if (!isset($_SESSION['UserID']) || !$_SESSION['UserID']){
-    header('location: dashboard_student_technology/index.php');
+    header('location: dashboard_guest/index.php');
     exit;
 } else {
 

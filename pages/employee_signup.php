@@ -144,7 +144,7 @@ session_start();
       Swal.fire({
         icon: 'success',
         title: 'Verified ',
-        text: 'Your employee Account is verified!'
+        text: 'Your Employee Account is verified!'
       })
     </script>
   <?php
