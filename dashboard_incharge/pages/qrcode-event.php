@@ -65,7 +65,7 @@
       Swal.fire({
         icon: 'error',
         title: 'Data Existed ',
-        text: 'User is already existed!'
+        text: 'This data is already existed!'
       })
     </script>
   <?php
@@ -80,7 +80,7 @@
       Swal.fire({
         icon: 'error',
         title: 'Data Existed ',
-        text: 'User is already existed!'
+        text: 'This data is already existed!'
       })
     </script>
   <?php
