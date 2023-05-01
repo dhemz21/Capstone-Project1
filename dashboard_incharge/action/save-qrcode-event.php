@@ -19,6 +19,8 @@ function check_internet_connection()
 if (isset($_POST['text'])) {
 
     $qrID = $_POST['text'];
+    $date = date("Y-m-d");
+    $time = date("h:i A");
 
     $validate = "SELECT * FROM registered_users WHERE qrID ='$qrID'";
     $result = mysqli_query($conn, $validate);
