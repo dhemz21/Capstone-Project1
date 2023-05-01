@@ -19,9 +19,6 @@ function check_internet_connection()
 if (isset($_POST['text'])) {
 
     $qrID = $_POST['text'];
-    $date = date("Y-m-d");
-    $time = date("H:i:s", time());
-    date_default_timezone_set('Australia/Perth');
 
     $validate = "SELECT * FROM registered_users WHERE qrID ='$qrID'";
     $result = mysqli_query($conn, $validate);
@@ -62,7 +59,7 @@ if (isset($_POST['text'])) {
             // CHECK INTERNET CONNECTION
             if (check_internet_connection()) {
                 // INSERT THE DATA INTO THE online_attendance TABLE
-                $sql = "INSERT INTO online_attendance (Registered_ID, IDnumber, Email, username, firstname, lastname, log_date, time_in, login_type) VALUES ('$reg_id', '$idnumber', '$mail', '$login_username', '$fname', '$lname', '$date', '$time', '$type')";
+                $sql = "INSERT INTO online_attendance (Registered_ID, IDnumber, Email, username, firstname, lastname, log_date, time_in, login_type) VALUES ('$reg_id', '$idnumber', '$mail', '$login_username', '$fname', '$lname', '$date', '$time','$type')";
                 if (mysqli_query($conn, $sql)) {
                     $_SESSION['validate'] = "successful";
                     echo "<script>window.location.href='.?folder=pages/&page=qrcode-event';</script>"; 
@@ -107,3 +104,4 @@ if (isset($_POST['text'])) {
     }
     
 }
+?>
