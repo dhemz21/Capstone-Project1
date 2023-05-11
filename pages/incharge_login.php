@@ -31,7 +31,7 @@ session_start();
                 <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color" >incharge portal</h4>
               </div>
               
-              <div class="student-form">
+              <div class="incharge-form">
                 <div class="profile-image">
                     <img src="assets/img/evsu.png" alt="">
                 </div>
@@ -65,6 +65,12 @@ session_start();
                 <div class="col-12">
                   <button class="btn btn text-white w-100" id="btn" type="submit" name="submit">Login</button>
                 </div>
+                <div class="col-12 mt-3 mb-0">
+              <p class="text-center"><a href=".?page=incharge_register" class="text-decoration-none">Register</a> </p>
+            </div>
+            <div class="col-12 mt-0">
+                <p class="text-center"><a href=".?page=incharge_forgot" class="text-decoration-none">Forgot Password?</a> </p>
+                </div>
                 <div class="col-12 mb-2">
                 <p class="text-start"><a href=".?page=form" class="text-decoration-none">Back to Homepage</a> </p>
                 </div>
@@ -76,6 +82,21 @@ session_start();
       </div>
     </section>
   </div>
+
+  <?php
+    if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'inserted') {
+      ?>
+          <script>
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success',
+                  text: ' You successfuly registered!'
+              })
+          </script>
+      <?php
+          unset($_SESSION['validate']);
+      }
+?>
 
   <?php
   if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'unsuccessful') {
@@ -92,6 +113,21 @@ session_start();
   }
   ?>
 
+<?php
+    if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'successful') {
+    ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Updated',
+                text: ' Your password successully updated!'
+            })
+        </script>
+    <?php
+        unset($_SESSION['validate']);
+    }
+    ?>
+    
   <script>
     function password_show_hide() {
       var x = document.getElementById("password");
