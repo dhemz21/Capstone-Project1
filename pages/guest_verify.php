@@ -28,7 +28,7 @@ session_start();
           </div>
           <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center shadow" id="main-container" style="min-height: 450px;">
             <div class="container-title w-100">
-                <h4 class="card-title w-100 p-3 text-center bg-danger text-white rounded-0" id="top-color">Registration</h4>
+                <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">Registration</h4>
               </div>
               
               <div class="student-form">
