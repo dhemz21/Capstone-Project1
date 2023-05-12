@@ -5,7 +5,7 @@ session_cache_limiter("nocache");
 session_start();
 
 // if(isset($_SESSION['IDnumber'])==0)  
-if (!isset($_SESSION['user']) || !$_SESSION['user']){
+if (!isset($_SESSION['IDnumber']) || !$_SESSION['IDnumber']){
     header('location: dashboard_incharge/index.php');
     exit;
 } else {

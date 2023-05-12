@@ -15,7 +15,6 @@
 
       <!-- JavaScript Bundle with Popper -->
     <script src="dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <!-- <script src="vendors/popper/popper.min.js"></script> -->
 </body>
 </html>

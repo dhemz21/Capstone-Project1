@@ -73,6 +73,20 @@ session_start();
 
   <script src="js/form-validation.js"></script>
 
+  <?php
+  if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'successful') {
+    ?>
+      <script>
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'OTP code has been sent to your email!'
+        })
+      </script>
+    <?php
+      unset($_SESSION['validate']);
+    }
+  ?>
   
   <?php
   if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'unsuccessful') {

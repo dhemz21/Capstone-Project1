@@ -44,7 +44,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user"></i></span>
                     </div>
-                    <input name="user" type="text" value="" class="input form-control" id="user" placeholder="Username" aria-label="username" aria-describedby="basic-addon1" required />
+                    <input name="IDnumber" type="text" class="input form-control" id="user" placeholder="Enter Incharge ID" required />
                   </div>
                 </div>
 
@@ -53,7 +53,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-lock"></i></span>
                     </div>
-                    <input name="password" type="password" value="" class="input form-control rounded-0" id="password" placeholder="Password" required="true" aria-label="password" aria-describedby="basic-addon1" required />
+                    <input name="password" type="password" class="input form-control rounded-0" id="password" required />
                     <div class="input-group-append">
                       <span class="input-group-text rounded-0" onclick="password_show_hide();">
                         <i class="fa fa-eye" id="show_eye"></i>

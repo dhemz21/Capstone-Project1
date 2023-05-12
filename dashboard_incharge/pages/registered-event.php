@@ -152,9 +152,6 @@ require_once("../database/db_conn.php");
         unset($_SESSION['validate']);
     }
     ?>
-
-
-
 </body>
 </html>
 </div>

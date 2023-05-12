@@ -35,10 +35,8 @@
                             <div class="form-group col-md-12">
                                 <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
                                 <label for="user">Username</label>
-                                <input type="text" class="form-control" name="user" value="<?php echo $getData['user']; ?>" readonly>
+                                <input type="text" class="form-control" value="<?php echo $getData['IDnumber']; ?>" readonly>
                             </div>
-
-
                             <div class="col-md-6">
                                 <label for="password">New Password</label>
                                 <div class="input-group mb-3">

@@ -13,13 +13,13 @@ $query = mysqli_query($conn, "SELECT email FROM registered_users");
 $emails = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 // Posted Data
-$title = $_POST['title'];
-$tow = $_POST['towho'];
-$fromw = $_POST['fromwho'];
-$subject = $_POST['subject'];
+$type = $_POST['eventType'];
+$to = $_POST['towho'];
+$from = $_POST['fromwho'];
+$subject = $_POST['eventSubject'];
 $venue = $_POST['venue'];
-$date = date("Y-m-d");
-$description = mysqli_real_escape_string($conn, $_POST['description']); // Escape apostrophes
+$date = $_POST['date'];
+$agenda = mysqli_real_escape_string($conn, $_POST['agenda']); // Escape apostrophes
 
 // Check if a file was uploaded
 if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
@@ -63,7 +63,7 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
 
 // Query
 // INSERTING THE DATA FROM TABLE INCHARGE_ADD_EVENT
-$sql = mysqli_query($conn,"INSERT INTO incharge_add_event(title, towho, fromwho, subject, venue, date, description, image, file) VALUES('$title', '$tow', '$fromw', '$subject', '$venue', '$date', '$description','$image', '$file')");
+$sql = mysqli_query($conn,"INSERT INTO incharge_add_event(eventType, towho, fromwho, eventSubject, venue, date, agenda, file) VALUES('$type', '$to', '$from', '$subject', '$venue', '$date',  '$agenda', '$file')");
 
 
 // Send email to all registered users

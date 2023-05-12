@@ -31,8 +31,16 @@ include_once('action/display-profile.php');
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
-                <label for="user">Username</label>
-                <input type="text" class="form-control" name="user" value="<?php echo $getData['user']; ?>" readonly>
+                <label for="user">ID number</label>
+                <input type="text" class="form-control" value="<?php echo $getData['IDnumber']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="user">Email</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['email']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="user">Department</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['department']; ?>" readonly>
               </div>
 
               <div class="form-group col-md-6">

@@ -73,7 +73,7 @@ session_start();
     <script>
       Swal.fire({
         icon: 'error',
-        title: "IDnumber doesn't exist",
+        title: "ID doesn't exist",
         text: 'Please check your information!'
       })
     </script>

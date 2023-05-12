@@ -48,11 +48,14 @@ if (isset($_POST['submit'])) {
         // CHECKING IF INSERTION IS SUCCESSFUL FROM REGISTERED_IDNUMBER 
         if (mysqli_query($conn, $sql)) {
             // IT WILL GO TO THIS FOLDER
+            $_SESSION['validate'] = "successful";
             header("location: .?folder=pages/&page=student_otp");
             exit(); // Stop further PHP execution
 
         } else {
             $_SESSION['validate'] = "unsuccessful";
+            header("location: .?page=student_register");
+            exit(); // Stop further PHP execution
         }
     } else {
 
