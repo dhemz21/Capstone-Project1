@@ -11,7 +11,7 @@ $(document).ready(function() {
         "Evsu",
         "EVSU-OC",
         "COVERED COURT",
-        "FUNCTION ROOM"
+        "FUNCTION HALL"
 
     ];
   
