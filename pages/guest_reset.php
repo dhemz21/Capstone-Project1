@@ -31,7 +31,7 @@ session_start();
           <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">change password</h4>
         </div>
 
-        <div class="student-form">
+        <div class="guest-form">
           <div class="profile-image">
             <img src="assets/img/evsu.png" alt="">
           </div>
@@ -70,7 +70,7 @@ session_start();
                 <div class="input-group-prepend">
                   <span class="input-group-text rounded-0" id="lock"><i class="fa fa-lock"></i></span>
                 </div>
-                <input type="password" oninput="confirmValidation()" class="input form-control" name="password" id="password" placeholder="Enter new password" required="true" aria-label="password" required />
+                <input type="password" oninput="confirmValidation()" class="input form-control" name="password" id="password" placeholder="Enter new password" required />
                 <div class="input-group-append">
                   <span class="input-group-text rounded-0" onclick="password_show_hide();">
                     <i class="fa fa-eye" id="show_eye"></i>
@@ -84,7 +84,7 @@ session_start();
                 <div class="input-group-prepend">
                   <span class="input-group-text rounded-0" id="lock"><i class="fa fa-lock"></i></span>
                 </div>
-                <input type="password" oninput="confirmValidation()" class="input form-control" name="confirm-password" id="confirm-password" placeholder="Re-type Password" required="true" aria-label="confirm-password" required />
+                <input type="password" oninput="confirmValidation()" class="input form-control" name="confirm-password" id="confirm-password" placeholder="Re-type Password" required />
                 <div class="input-group-append">
                   <span class="input-group-text rounded-0" onclick="confirm_password_show_hide();">
                     <i class="fa fa-eye" id="show_eye_confirm"></i>

@@ -6,7 +6,7 @@ $(document).ready(function() {
         "National Peace Consiousness Month",
         "Intramurals",
         "Ratification of Constitution and By-Laws",
-        "World Techer's Day",
+        "World Teacher's Day",
         "Clean-Up Drive",
         "Team Building",
         "Yolanda Commemoration",
@@ -21,11 +21,9 @@ $(document).ready(function() {
         "National Poetry Month",
         "Alcohol and Drug Awareness Month",
         "Programming Exhibit"
-
-
     ];
   
-    $('#subject').autocomplete({
+    $('#eventSubject').autocomplete({
       source: availableOptions,
       select: function(event, ui) {
         // Check if the selected option is null (meaning a custom value was entered)
@@ -41,9 +39,12 @@ $(document).ready(function() {
         }
       }
     });
-  
+
+    // Make autocomplete options scrollable
+    $('#eventSubject').autocomplete("widget").addClass("scrollable-menu");
+    
     // Listen for the Enter key press event on the input field
-    $('#subject').on('keydown', function(event) {
+    $('#eventSubject').on('keydown', function(event) {
       if (event.which === 13) {
         // Get the entered value
         const enteredValue = $(this).val();

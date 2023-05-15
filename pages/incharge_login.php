@@ -38,7 +38,7 @@ session_start();
                 <div class="header-form">
                 <h4 class="card-title pb-2 text-center">Attendance Management System </h4>
                 </div>
-              <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=admin_check" novalidate>
+              <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=incharge_check" novalidate>
                 <div class="col-12">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -53,7 +53,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-lock"></i></span>
                     </div>
-                    <input name="password" type="password" class="input form-control rounded-0" id="password" required />
+                    <input name="password" type="password" class="input form-control rounded-0" id="password" placeholder="Enter your password" required />
                     <div class="input-group-append">
                       <span class="input-group-text rounded-0" onclick="password_show_hide();">
                         <i class="fa fa-eye" id="show_eye"></i>

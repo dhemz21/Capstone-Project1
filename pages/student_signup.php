@@ -47,7 +47,7 @@ session_start();
             require_once('database/db_conn.php');
             // Get the user information from the database using the ID number
             $idnumber = $_SESSION['IDnumber'];
-            $query = "SELECT IDnumber, firstname, lastname, email, course, department FROM tbl_student WHERE IDnumber='$idnumber'";
+            $query = "SELECT IDnumber, firstname, middlename, lastname, email, year, course, department FROM tbl_student WHERE IDnumber='$idnumber'";
             $result = mysqli_query($conn, $query);
                  // Check if the query was successful
             if (!$result) {
@@ -67,6 +67,11 @@ session_start();
                 <input type="text" class="input form-control rounded-0" name="firstname" value="<?php echo $row['firstname']; ?>" readonly />
               </div>
             </div>
+              <div class="col-md-6">
+              <div class="input-group mb-2">
+                <input type="text" class="input form-control rounded-0" name="middlename" value="<?php echo $row['middlename']; ?>" readonly />
+              </div>
+            </div>
             <div class="col-md-6">
               <div class="input-group mb-2">
                 <input type="text" class="input form-control rounded-0" name="lastname" value="<?php echo $row['lastname']; ?>" readonly />
@@ -75,6 +80,11 @@ session_start();
             <div class="col-md-6">
               <div class="input-group mb-2">
                 <input type="text" class="input form-control rounded-0" name="email" value="<?php echo $row['email']; ?>" readonly />
+              </div>
+            </div>
+              <div class="col-md-6">
+              <div class="input-group mb-2">
+                <input type="text" class="input form-control rounded-0" name="year" value="<?php echo $row['year']; ?>" readonly />
               </div>
             </div>
             <div class="col-md-6">

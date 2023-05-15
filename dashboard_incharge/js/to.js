@@ -1,15 +1,15 @@
 $(document).ready(function() {
     const availableOptions = [
-      "Student",
-      "Employee",
-      "Guest",
-      "Employee and Student",
-      "Employee and Guest",
-      "Student and Guest",
-      "Select All"
+      "STUDENT",
+      "EMPLOYEE",
+      "GUEST",
+      "EMPLOYEE AND STUDENT",
+      "EMPLOYEE AND GUEST",
+      "STUDENT and GUEST",
+      "SELECT ALL"
     ];
   
-    $('#to').autocomplete({
+    $('#towho').autocomplete({
       source: availableOptions,
       select: function(event, ui) {
         // Check if the selected option is null (meaning a custom value was entered)
@@ -27,7 +27,7 @@ $(document).ready(function() {
     });
   
     // Listen for the Enter key press event on the input field
-    $('#to').on('keydown', function(event) {
+    $('#towho').on('keydown', function(event) {
       if (event.which === 13) {
         // Get the entered value
         const enteredValue = $(this).val();

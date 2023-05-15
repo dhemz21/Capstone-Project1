@@ -30,7 +30,7 @@ session_start();
                 <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">sign up</h4>
               </div>
               
-              <div class="student-form">
+              <div class="employee-form">
                 <div class="profile-image">
                     <img src="assets/img/evsu.png" alt="">
                 </div>

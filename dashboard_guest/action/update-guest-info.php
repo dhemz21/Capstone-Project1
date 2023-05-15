@@ -6,6 +6,7 @@ require_once('../database/db_conn.php');
 $userID = $_POST['UserID'];
 $username = $_POST['username'];
 $fname = $_POST['Firstname'];
+$mname = $_POST['Middlename'];
 $lname = $_POST['Lastname'];
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -22,7 +23,7 @@ $password = $_POST['password'];
 
   // VERIFY THE INPUT PASSWORD WITH THE HASHED PASSWORD FROM THE DATABASE
   if (password_verify($password, $hashed_password)) {
-$update_query = "UPDATE registered_users SET username='$username', Firstname='$fname', Lastname='$lname', email='$email' WHERE UserID = '$userID'";
+$update_query = "UPDATE registered_users SET username='$username', Firstname='$fname', Middlename='$mname', Lastname='$lname', email='$email' WHERE UserID = '$userID'";
 
 $update_result = mysqli_query($conn, $update_query);
 if ($update_result) {

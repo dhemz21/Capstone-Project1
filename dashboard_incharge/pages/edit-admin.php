@@ -35,7 +35,7 @@ include_once('action/display-profile.php');
 
             <!-- /.card-header -->
             <div class="card-body ">
-                <form action=".?folder=action/&page=update-admin" method="POST">
+                <form action=".?folder=action/&page=update-incharge" method="POST">
                     <?php
 
                     require_once("../database/db_conn.php");
@@ -57,6 +57,18 @@ include_once('action/display-profile.php');
                                 <input type="text" class="form-control" name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" name="firstname" value="<?php echo $getData['firstname']; ?>" required>
+                        </div>
+                            <div class="form-group col-md-6">
+                            <label for="middlename">Middle name</label>
+                            <input type="text" class="form-control"  name="middlename" value="<?php echo $getData['middlename']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="firstname">Last name</label>
+                            <input type="text" class="form-control" name="lastname"  value="<?php echo $getData['lastname']; ?>" required>
+                        </div>
+                            <div class="form-group col-md-6">
                                 <label for="user">Email</label>
                                 <input type="text" class="form-control" name="email" value="<?php echo $getData['email']; ?>" required>
                             </div>
@@ -70,7 +82,7 @@ include_once('action/display-profile.php');
                             <option>TECHNOLOGY</option>
                         </select>
                         </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="password">Current Password</label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

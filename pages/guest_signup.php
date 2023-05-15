@@ -31,7 +31,7 @@ session_start();
                 <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">sign up</h4>
               </div>
               
-              <div class="student-form">
+              <div class="guest-form">
                 <div class="profile-image">
                     <img src="assets/img/evsu.png" alt="">
                 </div>
@@ -47,7 +47,7 @@ session_start();
             require_once('database/db_conn.php');
             // Get the user information from the database using the ID number
             $email = $_SESSION['email'];
-            $query = "SELECT firstname, lastname, username, email FROM tbl_guest WHERE email = '$email'";
+            $query = "SELECT firstname, middlename, lastname, username, email FROM tbl_guest WHERE email = '$email'";
             $result = mysqli_query($conn, $query);
                  // Check if the query was successful
             if (!$result) {
@@ -64,6 +64,11 @@ session_start();
             </div>
             <div class="col-md-6">
               <div class="input-group mb-2">
+                <input type="text" class="input form-control rounded-0" name="middlename" value="<?php echo $row['middlename']; ?>" readonly />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-2">
                 <input type="text" class="input form-control rounded-0" name="lastname" value="<?php echo $row['lastname']; ?>" readonly />
               </div>
             </div>
@@ -72,7 +77,7 @@ session_start();
                 <input type="text" class="input form-control rounded-0" name="username" value="<?php echo $row['username']; ?>" readonly />
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="input-group mb-2">
                 <input type="text" class="input form-control rounded-0" name="email" value="<?php echo $row['email']; ?>" readonly />
               </div>

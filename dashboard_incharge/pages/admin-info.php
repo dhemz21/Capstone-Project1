@@ -39,11 +39,23 @@ include_once('action/display-profile.php');
                 <input type="text" class="form-control"  value="<?php echo $getData['email']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
+                <label for="firstname">First name</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['firstname']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="middlename">Middle name</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['middlename']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="firstname">Last name</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['lastname']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
                 <label for="user">Department</label>
                 <input type="text" class="form-control"  value="<?php echo $getData['department']; ?>" readonly>
               </div>
 
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-12">
                 <label for="password">Password</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">

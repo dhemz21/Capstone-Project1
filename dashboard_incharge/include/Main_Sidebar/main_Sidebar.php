@@ -16,7 +16,7 @@
         <img src="profile/<?php echo $image; ?>" alt="Add Photo">
       </div>
       <div class="info">
-        <a href=".?page=admin-info" class="d-block"><?php echo $_SESSION['type'] ?></a>
+        <a href=".?page=admin-info" class="d-block"><?php echo $_SESSION['firstname'] ?> <?php echo $_SESSION['lastname'] ?></a>
       </div>
     </div>
     <!-- Sidebar Menu -->

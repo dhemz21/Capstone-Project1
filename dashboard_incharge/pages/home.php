@@ -4,7 +4,7 @@
         <!-- Welcome Alert -->
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
             <p>
-                Hi! <strong><?php echo $_SESSION['type'] ?></strong> for <strong><?php echo $_SESSION['department'] ?></strong> Welcome to your Dashboard.
+                Hi! <strong><?php echo $_SESSION['firstname'] ?>, Welcome to your Dashboard.
             </p>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

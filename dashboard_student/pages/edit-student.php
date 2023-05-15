@@ -48,25 +48,45 @@ include_once('action/display-profile.php');
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
-                <label for="idnumber">IDnumber</label>
-                <input type="text" class="form-control rounded-0 " name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
+                <label for="idnumber">ID number</label>
+                <input type="text" class="form-control rounded-0 " name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" >
               </div>
               <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control rounded-0 " name="email" value="<?php echo $getData['email']; ?>" readonly>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="depart">Department</label>
-                <input type="text" class="form-control rounded-0 " name="depart" value="<?php echo $getData['Department']; ?>" readonly>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="fname">Firstname</label>
+                <label for="fname">First name</label>
                 <input type="text" class="form-control rounded-0 " name="Firstname" value="<?php echo $getData['Firstname']; ?>">
               </div>
               <div class="form-group col-md-6">
-                <label for="lname">Lastname</label>
+                <label for="lname">Middle name</label>
+                <input type="text" class="form-control rounded-0 " name="Middlename" value="<?php echo $getData['Middlename']; ?>">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lname">Last name</label>
                 <input type="text" class="form-control rounded-0 " name="Lastname" value="<?php echo $getData['Lastname']; ?>">
               </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control rounded-0 " name="email" value="<?php echo $getData['email']; ?>" >
+              </div>
+              <div class="form-group col-md-6">
+                        <label for="year">Year</label>
+                        <select id="year" class="form-control" name="year" required>
+                            <option selected><?php echo $getData['year']; ?></option>
+                            <option>1st</option>
+                            <option>2nd</option>
+                            <option>3rd</option>
+                            <option>4th</option>
+                        </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputState">Department</label>
+                        <select id="inputState" class="form-control" name="Department" required>
+                            <option selected><?php echo $getData['Department']; ?></option>
+                            <option>COMPUTER STUDIES</option>
+                            <option>ENGINEERING</option>
+                            <option>EDUCATION</option>
+                            <option>TECHNOLOGY</option>
+                        </select>
+                        </div>
               <div class="form-group col-md-6">
                 <label for="password">Current Password</label>
                 <div class="input-group mb-3">

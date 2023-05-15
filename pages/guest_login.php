@@ -30,7 +30,7 @@ session_start();
                 <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">guest portal</h4>
               </div>
               
-              <div class="student-form">
+              <div class="guest-form">
                 <div class="profile-image">
                     <img src="assets/img/evsu.png" alt="">
                 </div>
@@ -43,7 +43,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user"></i></span>
                     </div>
-                    <input name="username" type="text" value="" class="input form-control rounded-0" id="username" placeholder="username" aria-label="username" aria-describedby="basic-addon1" required />
+                    <input name="username" type="text" value="" class="input form-control rounded-0" id="username" placeholder="Username"required />
                   </div>
                 </div>
 
@@ -52,7 +52,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-lock"></i></span>
                     </div>
-                    <input name="password" type="password" value="" class="input form-control rounded-0" id="password" placeholder="Password" required="true" aria-label="password" aria-describedby="basic-addon1" required />
+                    <input name="password" type="password" value="" class="input form-control rounded-0" id="password" placeholder="Password" required="true"required />
                     <div class="input-group-append">
                       <span class="input-group-text rounded-0" onclick="password_show_hide();">
                         <i class="fa fa-eye" id="show_eye"></i>

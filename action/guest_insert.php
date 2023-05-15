@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
 	$email = $_POST['email'];
 	$fname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lname = $_POST['lastname'];
 		// HASH THE PASSWORD USING ARGON2
 		$password = $_POST['password'];
@@ -50,8 +51,11 @@ if (isset($_POST['submit'])) {
 	// GETTING THE SPECIFIC ROW FROM THE TBL_GUEST WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_USERS
 	$registered_id = $row['UserID'];
 	$reg_fname = $row['firstname'];
+	$mname = $row['middlename'];
 	$reg_lname = $row['lastname'];
 	$mail = $row['email'];
+	$log_type = $row['type'];
+
 
 	// CHECK THE USER THAT IS ALREADY EXISTED ON THE DATABASE FROM TABLE REGISTERED_USERS
 	$checkUser = "SELECT * FROM registered_users WHERE username ='$username' or email='$mail'";
@@ -80,8 +84,8 @@ if (isset($_POST['submit'])) {
 				QRcode::png($text, $file, 'L', 7, 2);
 		
 				//INSERTING THE DATA TO THE TABLE REGISTERED_USERS 
-				$sql = "INSERT INTO registered_users (Registered_ID, IDnumber, email, username, Firstname, Lastname, password, qrID, Department, login_type)
-			VALUES ('$registered_id ', 'none', '$mail', '$username','$reg_fname','$reg_lname','$hash','$qrIDText', 'none',  'GUEST')";
+				$sql = "INSERT INTO registered_users (Registered_ID, email, username, Firstname, Middlename, Lastname, password, Department, login_type, qrID)
+			VALUES ('$registered_id ', '$mail', '$username', '$reg_fname', '$mname', '$reg_lname', '$hash', 'none', '$log_type', '$qrIDText')";
 	
 	}
 

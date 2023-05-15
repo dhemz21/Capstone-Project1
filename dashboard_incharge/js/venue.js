@@ -32,6 +32,9 @@ $(document).ready(function() {
       }
     });
   
+      // Make autocomplete options scrollable
+      $('#venue').autocomplete("widget").addClass("scrollable-menu");
+    
     // Listen for the Enter key press event on the input field
     $('#venue').on('keydown', function(event) {
       if (event.which === 13) {

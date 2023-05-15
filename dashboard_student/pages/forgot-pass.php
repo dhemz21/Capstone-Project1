@@ -34,24 +34,11 @@
                             <img src="profile/<?php echo $image; ?>" alt="Profile Picture">
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <input type="hidden" name="UserID" value="<?php echo $getData['UserID']; ?>">
-                                <label for="idnumber">IDnumber</label>
+                                <label for="idnumber">ID number</label>
                                 <input type="text" class="form-control rounded-0 " name="IDnumber" value="<?php echo $getData['IDnumber']; ?>" readonly>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control rounded-0 " name="email" value="<?php echo $getData['email']; ?>" readonly>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="fname">Firstname</label>
-                                <input type="text" class="form-control rounded-0 " name="fname" value="<?php echo $getData['Firstname']; ?>" readonly>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="lname">Lastname</label>
-                                <input type="text" class="form-control rounded-0 " name="lname" value="<?php echo $getData['Lastname']; ?>" readonly>
-                            </div>
-
                             <div class="col-md-6">
                                 <label for="password">New Password</label>
                                 <div class="input-group mb-3">

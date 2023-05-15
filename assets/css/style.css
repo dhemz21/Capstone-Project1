@@ -83,7 +83,7 @@ body{
 
 
 /* STUDENT FORM SECTIONS */
-.student-form, .employee-form, .guest-employee, .incharge-form{
+.student-form, .employee-form, .guest-form, .incharge-form{
 	padding-left: 3rem;
 	padding-right: 3rem;
 }

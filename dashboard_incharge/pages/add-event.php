@@ -23,22 +23,36 @@ require_once("../database/db_conn.php");
                         <label for="eventType">Event Type:</label>
                         <select class="form-control" name="eventType" id="eventType" required>
                             <option selected>Choose type</option>
-                            <option>Meeting</option>
-                            <option>Seminar</option>
-                            <option>Activity</option>
+                            <option>MEETING</option>
+                            <option>SEMINAR</option>
+                            <option>ACTIVITY</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="towho">To:</label>
+                        <select class="form-control" name="towho[]" id="towho" required>
+                            <option selected> Choose person involved</option>
+                            <option value="1ST YEAR">1ST YEAR STUDENTS</option>
+                            <option value="2ND YEAR">2ND YEAR STUDENTS</option>
+                            <option value="3RD YEAR">3RD YEAR STUDENTS</option>
+                            <option value="4TH YEAR">4TH YEAR STUDENTS</option>
+                            <option value="STUDENT"> ALL STUDENT</option>
+                            <option value="EMPLOYEE">EMPLOYEE</option>
+                            <option value="GUEST">GUEST</option>
+                            <option value="STUDENT AND EMPLOYEE">STUDENT AND EMPLOYEE</option>
+                            <option value="STUDENT AND GUEST">STUDENT AND GUEST</option>
+                            <option value="EMPLOYEE AND GUEST">EMPLOYEE AND GUEST</option>
+                            <option value="EMPLOYEE STUDENT GUEST">SELECT ALL</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="to">To:</label>
-                        <input type="text" class="form-control" name="to" id="to" placeholder="Person involved" required>
-                        </div>
-                    <div class="form-group col-md-6">
-                        <label for="from">From:</label>
-                        <input type="text" class="form-control" name="from" id="from" value="<?php echo $getData['department']; ?>" readonly>
+                        <label for="fromwho">From:</label>
+                        <input type="text" class="form-control" name="fromwho" id="fromwho" value="<?php echo $getData['department']; ?>" readonly>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="eventSubject">Subject:</label>
-                        <input type="text" class="form-control" name="Eventsubject" id="eventSubject" placeholder="Enter your subject" required>
+                        <input type="text" class="form-control" name="eventSubject" id="eventSubject" placeholder="Enter your subject" required>
                         </div>
                     <div class="form-group col-md-6">
                         <label for="venue">Venue:</label>
@@ -76,9 +90,10 @@ require_once("../database/db_conn.php");
 </div>
 </div>
 
-<script src="js/to.js"></script>
 <script src="js/subject.js"></script>
 <script src="js/venue.js"></script>
+<script src="js/to.js"></script>
+
 
 <?php
 if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'large') {

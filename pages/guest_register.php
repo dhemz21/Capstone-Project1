@@ -31,7 +31,7 @@ session_start();
                 <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">Registration</h4>
               </div>
               
-              <div class="student-form">
+              <div class="guest-form">
                 <div class="profile-image">
                     <img src="assets/img/evsu.png" alt="">
                 </div>
@@ -45,24 +45,29 @@ session_start();
              
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="firstname" placeholder="Firstname" aria-label="firstname" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="firstname" placeholder="first name" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="lastname" placeholder="Lastname" aria-label="lastname" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="middlename" placeholder="middle name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group mb-2">
+                    <input type="text" class="input form-control rounded-0" name="lastname" placeholder="last name" required />
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="input-group mb-2">
-                    <input type="text" class="input form-control rounded-0" name="username" placeholder="Username" aria-label="username" aria-describedby="basic-addon1" required />
+                    <input type="text" class="input form-control rounded-0" name="username" placeholder="user name" required />
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="input-group mb-2">
-                    <input type="email" class="input form-control rounded-0" name="email" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" required />
+                    <input type="email" class="input form-control rounded-0" name="email" placeholder="email" required />
                   </div>
                 </div>
                 <div class="col-12">

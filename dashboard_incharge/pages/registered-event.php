@@ -59,12 +59,12 @@ require_once("../database/db_conn.php");
                 $i++;
               ?>
                 <tr>
-                  <td><?php echo $getData['title']; ?></td>
+                  <td><?php echo $getData['eventType']; ?></td>
                   <td><?php echo $getData['towho']; ?></td>
                   <td><?php echo $getData['fromwho']; ?></td>
-                  <td><?php echo $getData['subject']; ?></td>
+                  <td><?php echo $getData['eventSubject']; ?></td>
                   <td><?php echo $getData['venue']; ?></td>
-                  <td><?php echo $getData['description']; ?></td>
+                  <td><?php echo $getData['agenda']; ?></td>
                   <td><a href="files/<?php echo $getData['file']; ?>" target="_blank"><?php echo basename($getData['file']); ?></a></td>
                   <td><?php echo $getData['date']; ?></td>
                   <td class="text-left py-0 align-middle">

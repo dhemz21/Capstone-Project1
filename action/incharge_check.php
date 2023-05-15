@@ -34,6 +34,8 @@ if(isset($_POST['submit'])){
                 // ASSIGN THE VALUES OF EACH COLUMN IN THE RETURNED ROW TO DIFFERENT SESSION VARIABLES
                 $_SESSION['UserID'] = $getData['UserID'];
                 $_SESSION['IDnumber'] = $getData['IDnumber'];
+                $_SESSION['firstname'] = $getData['firstname'];
+                $_SESSION['lastname'] = $getData['lastname'];
                 $_SESSION['email'] = $getData['email'];
                 $_SESSION['department'] = $getData['department'];
                 $_SESSION['type'] = $getData['type'];

@@ -163,7 +163,10 @@
   padding-top: 0;
 }
 
-
+.ui-autocomplete.scrollable-menu {
+  max-height: 200px; /* Adjust the max-height as needed */
+  overflow-y: auto;
+}
 
 
 

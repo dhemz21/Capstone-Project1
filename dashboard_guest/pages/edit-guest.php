@@ -52,19 +52,23 @@ include_once('action/display-profile.php');
                 <input type="text" class="form-control rounded-0 " name="username" value="<?php echo $getData['username']; ?>" required>
               </div>
               <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control rounded-0 " name="email" value="<?php echo $getData['email']; ?>" required>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="fname">Firstname</label>
+                <label for="fname">First name</label>
                 <input type="text" class="form-control rounded-0 " name="Firstname" value="<?php echo $getData['Firstname']; ?>" required>
               </div>
               <div class="form-group col-md-6">
-                <label for="lname">Lastname</label>
+                <label for="mname">Middle name</label>
+                <input type="text" class="form-control rounded-0 " name="Middlename" value="<?php echo $getData['Middlename']; ?>" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lname">Last name</label>
                 <input type="text" class="form-control rounded-0 " name="Lastname" value="<?php echo $getData['Lastname']; ?>" required>
               </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control rounded-0 " name="email" value="<?php echo $getData['email']; ?>" required>
+              </div>
 
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-6">
                 <label for="password">Current Password</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">

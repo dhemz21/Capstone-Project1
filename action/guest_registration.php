@@ -5,12 +5,9 @@ session_start();
 // ADD THE CONFIG DATABASE CONNECTION CODE
 require_once('database/db_conn.php');
 
-
-
 $query_lastID = 'SELECT * FROM tbl_guest ORDER BY UserID DESC LIMIT 1';
 $result_lastID = mysqli_query($conn, $query_lastID) or die(mysqli_error($conn));
 $totalID = 0;
-
 
 // GETTING THE LAST ID BEFORE INSERTING NEW ID
 while ($row = mysqli_fetch_assoc($result_lastID)) {
@@ -24,6 +21,7 @@ if (isset($_POST['submit'])) {
 
 	// CHECK VARIABLE TO CATCH THE DATA FROM THE FORM
 	$firstname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lastname = $_POST['lastname'];
 	$username = $_POST['username'];
     $email = $_POST['email'];
@@ -45,8 +43,8 @@ if (isset($_POST['submit'])) {
     
 
 	// INSERT THE DATA TO TABLE TBL_GUEST
-	$sql = "INSERT INTO tbl_guest (firstname, lastname, username, email)
-	VALUES ('$firstname','$lastname', '$username', '$email')";
+	$sql = "INSERT INTO tbl_guest (firstname, middlename, lastname, username, email, type)
+	VALUES ('$firstname', '$mname', '$lastname', '$username', '$email', 'GUEST')";
     }
 		   
 	//CHECK IF THE INSERTION IS SUCCESSFUL

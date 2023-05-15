@@ -9,7 +9,6 @@ $query_lastID = 'SELECT * FROM 	registered_incharge ORDER BY UserID DESC LIMIT 1
 $result_lastID = mysqli_query($conn, $query_lastID) or die(mysqli_error($conn));
 $totalID = 0;
 
-
 // GETTING THE LAST ID BEFORE INSERTING THE NEW ID
 while ($row = mysqli_fetch_assoc($result_lastID)) {
 	$totalID = $row['UserID'];
@@ -18,17 +17,13 @@ while ($row = mysqli_fetch_assoc($result_lastID)) {
 // LAST ID PLUS 1 FOR THE INSERTED ID
 $totalID = $totalID + 1;
 
-
 if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
-	$email = $_POST['email'];
-	$depart = $_POST['department'];
-		// HASH THE PASSWORD USING ARGON2
-		$password = $_POST['password'];
-		$hash = password_hash($password, PASSWORD_ARGON2I);
+	// HASH THE PASSWORD USING ARGON2
+	$password = $_POST['password'];
+	$hash = password_hash($password, PASSWORD_ARGON2I);
 	
-
 	// RETRIEVE THE IDNUMBER FROM THIS TABLE FOR THE GIVEN SPECIFIC IDNUMBER
 	$query = "SELECT * FROM tbl_incharge WHERE IDnumber = '$idnumber'";
 	$result = mysqli_query($conn, $query);
@@ -41,31 +36,32 @@ if (isset($_POST['submit'])) {
 		exit;
 	}
 
-
 	// GETTING THE SPECIFIC ROW FROM THE TBL_INCHARGE WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_INCHARGE
 	$registered_id = $row['UserID'];
 	$idnumber = $row['IDnumber'];
+	$fname = $row['firstname'];
+	$mname = $row['middlename'];
+	$lname = $row['lastname'];
     $email = $row['email'];
 	$depart = $row['department'];
 
-
 	// CHECK THE USER THAT IS ALREADY EXISTED ON THE DATABASE FROM TABLE REGISTERED_INCHARGE
-	$checkUser = "SELECT * FROM registered_admin WHERE IDnumber ='$idnumber' or email='$email'";
+	$checkUser = "SELECT * FROM registered_incharge WHERE IDnumber ='$idnumber' or email='$email'";
 	$result = mysqli_query($conn, $checkUser);
 
 	$count = mysqli_num_rows($result);
 	if ($count > 0) {
 
 		$_SESSION['validate'] = "existed";
-        header("location: .?page=admin_signup");
+        header("location: .?page=incharge_signup");
 		exit(); // Stop further PHP execution
 
 
 	} else {
 
 		//INSERTING THE DATA TO THE TABLE REGISTERED_INCHARGE
-		$sql = "INSERT INTO registered_incharge (Registered_ID, IDnumber, email, department, password, type)
-		VALUES ('$registered_id ', '$idnumber', '$email','$depart','$hash', 'INCHARGE')";
+		$sql = "INSERT INTO registered_incharge (Registered_ID, IDnumber, firstname, middlename, lastname, email, department, password, type)
+		VALUES ('$registered_id ', '$idnumber', '$fname', '$mname', '$lname', '$email','$depart','$hash', 'INCHARGE')";
 	
 	}
 

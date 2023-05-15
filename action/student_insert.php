@@ -64,8 +64,10 @@ if (isset($_POST['submit'])) {
 	// GETTING THE SPECIFIC ROW FROM THE TBL_STUDENT WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_USERS
 	$registered_id = $row['UserID'];
 	$reg_fname = $row['firstname'];
+	$reg_mname = $row['middlename'];
 	$reg_lname = $row['lastname'];
 	$mail = $row['email'];
+	$year = $row['year'];
 	$depart = $row['department'];
 	$log_type = $row['type'];
 	
@@ -85,8 +87,8 @@ if (isset($_POST['submit'])) {
 			
 		
 				//INSERTING THE DATA TO THE TABLE REGISTERED_USERS 
-				$sql = "INSERT INTO registered_users (Registered_ID, IDnumber, email, username, Firstname, Lastname, password, qrID, Department, login_type)
-			VALUES ('$registered_id ', '$idnumber', '$mail', 'none', '$reg_fname','$reg_lname','$hash','$qrIDText', '$depart', '$log_type')";
+				$sql = "INSERT INTO registered_users (Registered_ID, IDnumber, email, Firstname, Middlename, Lastname, password, year, Department, login_type, qrID)
+			VALUES ('$registered_id ', '$idnumber', '$mail', '$reg_fname','$reg_mname','$reg_lname','$hash', '$year', '$depart', '$log_type', '$qrIDText')";
 	
 	}
 

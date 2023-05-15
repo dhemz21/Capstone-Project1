@@ -31,7 +31,7 @@ session_start();
           <h4 class="card-title w-100 p-3 text-center text-white rounded-0" id="top-color">verification</h4>
         </div>
 
-        <div class="student-form">
+        <div class="employee-form">
           <div class="profile-image">
             <img src="assets/img/evsu.png" alt="evsu logo">
           </div>
@@ -49,7 +49,7 @@ session_start();
                 <div class="input-group-prepend">
                   <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user-lock"></i></span>
                 </div>
-                <input name="otp" type="text" class="input form-control rounded-0" id="otp" placeholder="Enter your OTP" aria-label="otp" aria-describedby="basic-addon1" required />
+                <input name="otp" type="text" class="input form-control rounded-0" id="otp" placeholder="Enter your OTP" required />
               </div>
             </div>
             <div class="col-12">
