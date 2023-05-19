@@ -23,21 +23,21 @@ if (empty($data)) {
 $success_count = 0;
 foreach ($data as $row) {
     $reg_id = $row['Registered_ID'];
-    $idnumber = $row['IDnumber'];
-    $mail = $row['Email'];
-    $login_username = $row['username'];
+    $event_id =$row['Event_ID'];
     $fname = $row['firstname'];
+    $mname = $row['middlename'];
     $lname = $row['lastname'];
-    $date = $row['log_date'];
+    $mail = $row['email'];
     $time = $row['time_in'];
     $type = $row['login_type'];
+    $event = $row['eventType'];
 
-    $sql = "INSERT INTO online_attendance (Registered_ID, IDnumber, Email, username, firstname, lastname, log_date, time_in, login_type) VALUES ('$reg_id', '$idnumber', '$mail', '$login_username', '$fname', '$lname', '$date', '$time', '$type')";
+    $sql = "INSERT INTO online_attendance (Registered_ID, Event_ID, firstname, middlename, lastname, email, time_in, login_type, eventType) VALUES ('$reg_id', $event_id, '$fname', '$mname', '$lname', '$mail',  '$time', '$type', '$event')";
 
     if (mysqli_query($conn, $sql)) {
         // Remove the data from the JSON file after successful insertion
-        $data = array_filter($data, function ($item) use ($mail, $date) {
-            return ($item['Email'] !== $mail || $item['log_date'] !== $date);
+        $data = array_filter($data, function ($item) use ($reg_id, $mail) {
+            return ($item['Registered_ID'] !== $reg_id || $item['email'] !== $mail);
         });
         // file_put_contents('scanned_data.json', json_encode($data));
         // Write the empty array to the file

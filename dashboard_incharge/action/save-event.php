@@ -101,14 +101,14 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
 // Query
 // INSERTING THE DATA FROM TABLE INCHARGE_ADD_EVENT
 $towho = implode(", ", $to);
-$sql = mysqli_query($conn,"INSERT INTO incharge_add_event(eventType, towho, fromwho, eventSubject, venue, date, agenda, file) VALUES('$type', '$towho', '$from', '$subject', '$venue', '$date',  '$agenda', '$file')");
+$sql = mysqli_query($conn,"INSERT INTO incharge_add_event(eventType, towho, fromwho, eventSubject, venue, date, agenda, file, eventStatus) VALUES('$type', '$towho', '$from', '$subject', '$venue', '$date',  '$agenda', '$file', 'Active')");
 
 
 // Send email to all registered users
 foreach ($emails as $email) {
     $mail->addAddress($email['email']);
     $mail->Subject = $type;
-    $mail->Body    = "To: $towho\nFrom: $from\nSubject: $subject\nVenue: $venue\nDate: $date\n\n$agenda";
+    $mail->Body    = "To: $towho\nFrom: $from\nSubject: $subject\nVenue: $venue\nDate: $date\nAgenda: $agenda";
     if ($file) {
         $mail->addAttachment('files/'.$file);
     }

@@ -1,7 +1,7 @@
 function confirmDelete() {
   Swal.fire({
     title: 'Are you sure?',
-    text: "You want to delete this records? This operation cannot be undone!",
+    text: "You want to delete all attendance records? This operation cannot be undone!",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',

@@ -188,3 +188,45 @@
   }
 
 }
+
+@media (max-width: 1230px){
+  .btn, .btn-primary{
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 1187px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 7px;
+  }
+
+}
+
+@media (max-width: 1167px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1159px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 1110px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  #qrcode{
+    display: none;
+  }
+}

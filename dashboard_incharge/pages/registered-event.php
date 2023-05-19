@@ -59,6 +59,7 @@ require_once("../database/db_conn.php");
                 $i++;
               ?>
                 <tr>
+                <td><?php echo $i; ?></td>
                   <td><?php echo $getData['eventType']; ?></td>
                   <td><?php echo $getData['towho']; ?></td>
                   <td><?php echo $getData['fromwho']; ?></td>
@@ -91,7 +92,7 @@ require_once("../database/db_conn.php");
 </section>
 <!-- /.content -->
 
-<script src="js/colvis.js"></script>
+<script src="js/datatable.js"></script>
 
 <?php
     if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'successful') {

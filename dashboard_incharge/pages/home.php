@@ -34,15 +34,13 @@
                           }
 
                         ?>
-                    
-
                         <p><strong>Total Users</strong> </p>
                     </div>
                     <div class="icon">
                     <i class="nav-icon fas fa-user-tie"></i> 
                     </div>
                     <a  class="small-box-footer"> <i class="fas fa-check-circle"></i></a>
-                                </div>
+                 </div>
             </div>
             <div class="col-lg-4 col-6">
                 <!-- small box -->
@@ -64,8 +62,6 @@
                                 echo '<h3>' . $totalposts . '</h3> ';
                             }
                             ?>
-
-
                         <p><strong>Total Events</strong> </p>
                     </div>
                     <div class="icon">
@@ -79,7 +75,7 @@
                 <!-- small box -->
                 <div class="small-box text-white shadow-sm" id="box3">
                     <div class="inner">
-                        <h4>Event Records</h4>
+                        <h4>Meeting Records</h4>
                         <?php
                         require_once("../database/db_conn.php");
                         $query = "SELECT COUNT(*) FROM online_attendance";
@@ -99,9 +95,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-6">
+            <!-- <div class="col-lg-4 col-6"> -->
                 <!-- small box -->
-                <div class="small-box text-white shadow-sm" id="box4">
+                <!-- <div class="small-box text-white shadow-sm" id="box4">
                     <div class="inner">
                         <h4>History File</h4>
                         <?php
@@ -127,7 +123,7 @@
                     </div>
                     <a href=".?folder=pages/&page=pdf-event" class="small-box-footer">View Table <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div>
+            </div> -->
   
             <!-- ./col -->
         </div>

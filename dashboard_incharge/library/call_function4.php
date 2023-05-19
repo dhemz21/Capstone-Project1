@@ -2,6 +2,7 @@
 function call_fields()
 {
   echo "<tr>
+  <th style='letter-spacing: 1px; text-transform: uppercase'>#</th>
   <th style='letter-spacing: 1px; text-transform: uppercase'>Event Type</th>
   <th style='letter-spacing: 1px; text-transform: uppercase'>To</th>
   <th style='letter-spacing: 1px; text-transform: uppercase'>From</th>

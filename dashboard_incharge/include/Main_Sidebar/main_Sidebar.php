@@ -54,16 +54,16 @@
           <a href="#" class="nav-link">
           <i class="nav-icon fas fa-qrcode"></i>
             <p>
-              QR Code Scanner
+              Scan Event
               <i class="fas fa-angle-left right"></i>
               <span class="badge badge-info right"></span>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href=".?page=qrcode-event" class="nav-link">
+              <a href=".?page=event-list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Event Scanner</p>
+                <p>Event List</p>
               </a>
             </li>     
             <li class="nav-item">
@@ -72,42 +72,6 @@
                 <p>Upload File</p>
               </a>
             </li>               
-      </ul>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-          <i class="nav-icon fas fa-list-alt"></i>
-            <p>
-              Attendance Table
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right"></span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href=".?page=attendance-event" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Online Attendance</p>
-              </a>
-            </li>           
-          </ul>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-history"></i>
-            <p>
-              History
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right"></span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href=".?page=pdf-event" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Attendance | Records</p>
-              </a>
-            </li>
       </ul>
       <li class="nav-item">
         <a href="action/logout.php?page=logout" class="nav-link">
