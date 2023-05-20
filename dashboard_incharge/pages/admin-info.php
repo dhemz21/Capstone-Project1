@@ -35,10 +35,6 @@ include_once('action/display-profile.php');
                 <input type="text" class="form-control" value="<?php echo $getData['IDnumber']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
-                <label for="user">Email</label>
-                <input type="text" class="form-control"  value="<?php echo $getData['email']; ?>" readonly>
-              </div>
-              <div class="form-group col-md-6">
                 <label for="firstname">First name</label>
                 <input type="text" class="form-control"  value="<?php echo $getData['firstname']; ?>" readonly>
               </div>
@@ -49,6 +45,10 @@ include_once('action/display-profile.php');
               <div class="form-group col-md-6">
                 <label for="firstname">Last name</label>
                 <input type="text" class="form-control"  value="<?php echo $getData['lastname']; ?>" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="user">Email</label>
+                <input type="text" class="form-control"  value="<?php echo $getData['email']; ?>" readonly>
               </div>
               <div class="form-group col-md-6">
                 <label for="user">Department</label>

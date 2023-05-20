@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+	font-family: Helvetica;
+
+}
+
+/* NAVBAR SECTIONS */
+.content-wrapper{
+  background-color: #ffffff;
+}
+
+.main-header{
+  background-color: #a91414;
+
+}
+
+#pushmenu{
+  color: #ffffff;
+}
+
+#fullscreen{
+  color: #ffffff;
+}
+
+/* NAVBAR SECTIONS END*/
+
+/* ADMIN EDIT PROFILE PICTURE */
+.profile-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.btn-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* SIDEBAR PROFILE */
+#profile-image img{
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+  
+}
+
+.info a{
+  margin-top: 10px;
+}
+
+/* SIDEBAR PROFILE END*/
+
+/* QR CODE SCANNER SECTION */
+
+#container-scanner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container-scanner{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+
+}
+
+#card-qr {
+  max-width: 45%;
+  text-align: center;
+}
+
+.card-qr{      
+  border-style: solid;
+  border-width: 2px;
+}
+
+.card-header {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+.card-header{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Helvetica;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* QR CODE SCANNER SECTION END*/
+
+
+/* EVSU COLORS APPLIED */
+
+.card-header{
+  background-color: #F5F5F5;
+}
+
+/* EVSU COLORS APPLIED END*/
+
+/* BUTTON COLOR */
+#save{
+  background-color: #b31616;
+}
+#edit{
+  background-color: #00c0ef;
+}
+
+#add{
+  background-color: #00c0ef;
+}
+
+#generate{
+  background-color: #00c0ef;
+}
+
+#edit-profile{
+  background-color: #f39c12;
+
+}
+/* BUTTON COLOR END*/
+
+/* SMALL BOX */
+#box1{
+  background-color: #00a65a;
+  border-bottom: 5px solid #0b864d;
+}
+
+#box2{
+  background-color: #00c0ef;
+  border-bottom: 5px solid #0d9bbd;
+}
+
+#box3{
+  background-color: #f39c12;
+  border-bottom: 5px solid #d6880c;
+}
+
+#box4{
+  background-color: #dd4b39;
+  border-bottom: 5px solid #bd301e;
+}
+
+/* SMALL BOX END */
+
+
+#file .form-control{
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.ui-autocomplete.scrollable-menu {
+  max-height: 200px; /* Adjust the max-height as needed */
+  overflow-y: auto;
+}
+
+
+
+/* 720 pexel realme5 */
+@media only screen and (max-width: 720px){
+    #btn-menu .btn{
+        width: 6.7rem;
+    }
+  #btn-menu a{
+    margin-bottom: 5px;
+
+  }
+  #card-qr{
+    max-width: 100%;
+  }
+
+  .inner h4{
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 1230px){
+  .btn, .btn-primary{
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 1187px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 7px;
+  }
+
+}
+
+@media (max-width: 1167px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1159px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 1110px){
+  .btn, .btn-primary{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  #qrcode{
+    display: none;
+  }
+}

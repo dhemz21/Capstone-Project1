@@ -43,10 +43,10 @@ if(isset($_POST['submit'])){
                 // Get the department of the user
                 $department = $getData['department'];
                 if($department == "COMPUTER STUDIES"){
-                    // Redirect to Engineering dashboard
+                 // Redirect to Computer Studies dashboard
                     header("location: dashboard_incharge/");
                 }elseif($department == "ENGINEERING"){
-                    // Redirect to Computer Studies dashboard
+                    // Redirect to Engineering dashboard
                     header("location: dashboard_incharge2/");
                 }
                 exit(); // Stop further PHP execution

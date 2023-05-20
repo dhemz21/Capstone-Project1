@@ -54,7 +54,7 @@ require_once("../database/db_conn.php");
             <tbody>
               <?php
               $i = 0;
-              $sql = mysqli_query($conn, "SELECT * FROM incharge_add_event");
+              $sql = mysqli_query($conn, "SELECT * FROM incharge_add_event WHERE fromwho='COMPUTER STUDIES'");
               while ($getData = mysqli_fetch_array($sql)) {
                 $i++;
               ?>
@@ -70,7 +70,7 @@ require_once("../database/db_conn.php");
                   <td><?php echo $getData['date']; ?></td>
                   <td class="text-left py-0 align-middle">
                     <div class="btn-group btn-group-sm">
-                      <a href=".?page=edit-event&userID=<?php echo $getData['userID']; ?>" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                      <!-- <a href=".?page=edit-event&userID=<?php echo $getData['userID']; ?>" class="btn btn-info"><i class="fas fa-edit"></i></a> -->
                       <a onclick="return confirm('Are you sure you want to delete this Event?')" href=".?folder=action/&page=delete-event&userID=<?php echo $getData['userID']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                     </div>
                   </td>

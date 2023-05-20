@@ -12,7 +12,7 @@
                         <h4>Meeting Records</h4>
                         <?php
                         require_once("../database/db_conn.php");
-                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='MEETING'";
+                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='MEETING' AND fromwho='COMPUTER STUDIES'";
                         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
                         $count = mysqli_fetch_row($result);
@@ -35,7 +35,7 @@
                         <h4>Seminar Records</h4>
                         <?php
                         require_once("../database/db_conn.php");
-                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='SEMINAR'";
+                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='SEMINAR' AND fromwho='COMPUTER STUDIES'";
                         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
                         $count = mysqli_fetch_row($result);
@@ -59,7 +59,7 @@
                         <h4>Activity Records</h4>
                         <?php
                         require_once("../database/db_conn.php");
-                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='ACTIVITY'";
+                        $query = "SELECT COUNT(*) FROM incharge_add_event WHERE eventType='ACTIVITY' AND fromwho='COMPUTER STUDIES'";
                         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
                         $count = mysqli_fetch_row($result);

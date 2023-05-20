@@ -46,37 +46,57 @@
                 $query = mysqli_query($conn, "SELECT * FROM incharge_add_event where userID = '$userId'");
                 while ($getData = mysqli_fetch_array($query)) {
                 ?>
-
-
-                    <div class="form-group col-md-12">
-                        <input type="hidden" name="userID" value="<?php echo $getData['userID']; ?>">
-                        <label for="title">Post Tile</label>
-                        <input type="text" class="form-control" name="title" value="<?php echo $getData['title']; ?>" required>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <input type="hidden" name="userID" value="<?php echo $getData['userID']; ?>">
+                        <label for="eventType">Event Type:</label>
+                        <select class="form-control" name="eventType" id="eventType" required>
+                            <option selected><?php echo $getData['eventType']; ?></option>
+                            <option>MEETING</option>
+                            <option>SEMINAR</option>
+                            <option>ACTIVITY</option>
+                        </select>
                     </div>
-
-                    <div class="form-group col-md-12">
-                    <label for="to">To:</label>
-                    <input type="text" class="form-control" name="towho" value="<?php echo $getData['towho']; ?>"  required>
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="from">From:</label>
-                    <input type="text" class="form-control" name="fromwho" value="<?php echo $getData['fromwho']; ?>"  required>
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="subject">Subject</label>
-                    <input type="text" class="form-control" name="subject" value="<?php echo $getData['subject']; ?>" required>
-                </div>
-                  <div class="form-group col-md-12">
-                    <label for="venue">Venue</label>
-                    <input type="text" class="form-control" name="venue" value="<?php echo $getData['venue']; ?>"  required>
-                </div>
-
-                    <div class="form-col">
-                        <div class="form-group col-md-12">
-                            <label for="text" class="form-label">Description</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="description" required> <?php echo $getData['description']; ?></textarea>
+                    <div class="form-group col-md-6">
+                        <label for="towho">To:</label>
+                        <select class="form-control" name="towho[]" id="towho" required>
+                            <option selected></option>
+                            <option value="1ST YEAR">1ST YEAR STUDENTS</option>
+                            <option value="2ND YEAR">2ND YEAR STUDENTS</option>
+                            <option value="3RD YEAR">3RD YEAR STUDENTS</option>
+                            <option value="4TH YEAR">4TH YEAR STUDENTS</option>
+                            <option value="STUDENT"> ALL STUDENT</option>
+                            <option value="EMPLOYEE">EMPLOYEE</option>
+                            <option value="GUEST">GUEST</option>
+                            <option value="STUDENT AND EMPLOYEE">STUDENT AND EMPLOYEE</option>
+                            <option value="STUDENT AND GUEST">STUDENT AND GUEST</option>
+                            <option value="EMPLOYEE AND GUEST">EMPLOYEE AND GUEST</option>
+                            <option value="EMPLOYEE STUDENT GUEST">SELECT ALL</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fromwho">From:</label>
+                        <input type="text" class="form-control" name="fromwho" id="fromwho" value="<?php echo $getData['fromwho']; ?>" readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="eventSubject">Subject:</label>
+                        <input type="text" class="form-control" name="eventSubject" id="eventSubject" value="<?php echo $getData['eventSubject']; ?>"required>
                         </div>
+                    <div class="form-group col-md-6">
+                        <label for="venue">Venue:</label>
+                        <input type="text" class="form-control" name="venue" id="venue" value="<?php echo $getData['venue']; ?>"required>
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="date">Date:</label>
+                        <input type="date" class="form-control" name="date" id="date" value="<?php echo $getData['date']; ?>" required>
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group col-md-12 p-0">
+                        <label for="agenda" class="form-label">Agenda:</label>
+                        <textarea class="form-control" rows="3" name="agenda" id="agenda" required><?php echo $getData['agenda']; ?></textarea>
+                    </div>
+                </div>
                 <?php } ?>
                 <div class="buttons">
                 <button type="submit" class="btn text-white" id="save">Update</button>

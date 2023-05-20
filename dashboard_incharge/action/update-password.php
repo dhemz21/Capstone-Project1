@@ -12,7 +12,7 @@ $password = $_POST['password'];
 $hash = password_hash($password, PASSWORD_ARGON2I);
 
 // UPDATING DATA FROM THE TABLE INCHARGE
-$query = "UPDATE registered_incharge SET password='$hash' WHERE UserID = '$userID' ";
+$query = "UPDATE registered_incharge SET password='$hash' WHERE UserID = '$userID' AND department='COMPUTER STUDIES' ";
 
 if (mysqli_query($conn, $query)) {
     $_SESSION['validate'] = "update";

@@ -19,18 +19,18 @@ $agenda = mysqli_real_escape_string($conn, $_POST['agenda']); // Escape apostrop
 // Get registered users
 if (in_array("EMPLOYEE STUDENT GUEST", $to)) {
     // If "Select All" is chosen, retrieve all types
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE (login_type IN ('EMPLOYEE', 'STUDENT', 'GUEST') AND department='COMPUTER STUDIES') OR (login_type = 'GUEST' AND department = 'none')");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE (login_type IN ('EMPLOYEE', 'STUDENT', 'GUEST') AND Department='COMPUTER STUDIES') OR (login_type = 'GUEST' AND Department = 'none')");
 } elseif (in_array("STUDENT AND EMPLOYEE", $to)) {
     // If "STUDENT AND EMPLOYEE" is selected, retrieve both students and employees
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT', 'EMPLOYEE') AND department='COMPUTER STUDIES'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT', 'EMPLOYEE') AND Department='COMPUTER STUDIES'");
 
 }elseif (in_array("STUDENT AND GUEST", $to)) {
     // If "STUDENT AND GUEST" is selected, retrieve both students and guests
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT', 'GUEST') AND department='COMPUTER STUDIES' OR department='none'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT', 'GUEST') AND Department='COMPUTER STUDIES' OR Department='none'");
 
 }elseif (in_array("EMPLOYEE AND GUEST", $to)) {
     // If "EMPLOYEE AND GUEST" is selected, retrieve both employee and guests
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('EMPLOYEE', 'GUEST')AND department='COMPUTER STUDIES' OR department='none'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('EMPLOYEE', 'GUEST')AND Department='COMPUTER STUDIES' OR Department='none'");
 
 }elseif (in_array("GUEST", $to)) {
     // If "GUEST" is selected, retrieve guests
@@ -38,22 +38,22 @@ if (in_array("EMPLOYEE STUDENT GUEST", $to)) {
 
 }elseif (in_array("1ST YEAR", $to)) {
     // If "1ST YEAR" is selected, retrieve 1ST YEAR STUDENTS
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENTS') AND department='COMPUTER STUDIES' OR year='1st'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT') AND Department='COMPUTER STUDIES' AND year='1st'");
 
 }elseif (in_array("2ND YEAR", $to)) {
     // If "2ND YEAR" is selected, retrieve 2ND YEAR STUDENTS
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENTS') AND department='COMPUTER STUDIES' OR year='2nd'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT') AND Department='COMPUTER STUDIES' AND year='2nd'");
 
 }elseif (in_array("3RD YEAR", $to)) {
     // If "3ND YEAR" is selected, retrieve 3RD YEAR STUDENTS
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENTS') AND department='COMPUTER STUDIES' OR year='3rd'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT') AND Department='COMPUTER STUDIES' AND year='3rd'");
 
 }elseif (in_array("4TH YEAR", $to)) {
     // If "4TH YEAR" is selected, retrieve 4TH YEAR STUDENTS
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENTS') AND department='COMPUTER STUDIES' OR year='4th'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('STUDENT') AND Department='COMPUTER STUDIES' AND year='4th'");
 }else {
     // Otherwise, retrieve the selected types only
-    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('" . implode("','", $to) . "') AND department='COMPUTER STUDIES'");
+    $query = mysqli_query($conn, "SELECT email FROM registered_users WHERE login_type IN ('" . implode("','", $to) . "') AND Department='COMPUTER STUDIES'");
 }
 $emails = mysqli_fetch_all($query, MYSQLI_ASSOC);
 

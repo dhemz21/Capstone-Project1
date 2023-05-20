@@ -231,13 +231,13 @@ function addTable(doc, table) {
   var event_id = urlParams.get('userID');
 
   // Create the link URL with the event_id
-  var linkUrl = 'http://localhost/Evsu_Attendance/?page=meeting&userID=' + event_id;
+  var linkUrl = 'http://localhost/Evsu_Attendance/?page=computer_studies&userID=' + event_id;
 
   doc.setTextColor(0, 0, 0); // Set text color to black
-  doc.text(label, x + textWidth + 120, y);
+  doc.text(label, x + textWidth + 80, y);
   doc.setFontSize(10); // Set font size for the URL
   doc.setTextColor(0, 0, 255); // Set text color to blue
-  doc.textWithLink(linkUrl, x + textWidth + 120 + labelWidth, y, { url: linkUrl });
+  doc.textWithLink(linkUrl, x + textWidth + 80 + labelWidth, y, { url: linkUrl });
 }
   });
 }

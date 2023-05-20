@@ -13,7 +13,7 @@ $password = $_POST['password'];
 
 
   // Retrieve the hashed password from the database for the user
-  $query = "SELECT password FROM registered_incharge WHERE UserID = '$userID'";
+  $query = "SELECT password FROM registered_incharge WHERE UserID = '$userID' AND department='COMPUTER STUDIES'";
   $result = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($result);
   $hashed_password = $row['password'];
@@ -22,7 +22,7 @@ $password = $_POST['password'];
 // UPDATING DATA FROM THE TABLE INCHARGE
   // Verify the input password with the hashed password from the database
   if (password_verify($password, $hashed_password)) {
-$update_query = "UPDATE registered_incharge SET IDnumber='$idnumber', firstname='$fname', middlename='$mname', lastname='$lname', email='$email', department='$depart'";
+$update_query = "UPDATE registered_incharge SET IDnumber='$idnumber', firstname='$fname', middlename='$mname', lastname='$lname', email='$email', department='$depart' WHERE department='COMPUTER STUDIES'";
 
 $update_result = mysqli_query($conn, $update_query);
 if ($update_result) {

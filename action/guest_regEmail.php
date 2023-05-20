@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
 
     $email = $_POST['email'];
 
-    // RETRIEVE THE EMAIL ADDRESS FOR THE GIVEN SPECIFIC IDNUMBER
+    // RETRIEVE THE EMAIL ADDRESS FOR THE GIVEN SPECIFIC EMAIL
     $validate = "SELECT * FROM tbl_guest WHERE email ='$email'";
     $result = mysqli_query($conn, $validate);
 

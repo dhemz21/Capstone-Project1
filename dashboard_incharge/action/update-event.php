@@ -3,15 +3,16 @@
 require_once('../database/db_conn.php');
 // Posted Data
 $userId = $_POST['userID'];
-$title = $_POST['title'];
+$event = $_POST['eventType'];
 $tow = $_POST['towho'];
 $fromw = $_POST['fromwho'];
-$subject = $_POST['subject'];
+$subject = $_POST['eventSubject'];
 $venue = $_POST['venue'];
-$description = $_POST['description'];
+$date = $_POST['date'];
+$agenda = $_POST['agenda'];
 
 // UPDATING DATA FROM THE TABLE INCHARGE_ADD_POST
-$query = "UPDATE incharge_add_event SET title='$title', towho='$tow', fromwho = '$fromw', subject = '$subject', venue = '$venue', description='$description' WHERE userID = '$userId'";
+$query = "UPDATE incharge_add_event SET eventType='$event', towho='$tow', fromwho ='$fromw', eventSubject='$subject', venue ='$venue', date='$date', agenda='$agenda' WHERE userID = '$userId'";
 
 if(mysqli_query($conn, $query)){
 

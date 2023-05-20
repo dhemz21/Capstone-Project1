@@ -26,7 +26,7 @@ require_once("../database/db_conn.php");
             <tbody>
               <?php
               $i = 0;
-              $sql = mysqli_query($conn, "SELECT * FROM incharge_add_event WHERE eventType='MEETING'");
+              $sql = mysqli_query($conn, "SELECT * FROM incharge_add_event WHERE eventType='MEETING' AND fromwho='COMPUTER STUDIES'");
               while ($getData = mysqli_fetch_array($sql)) {
                 $i++;
               ?>
