@@ -13,10 +13,6 @@ $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP serv
 $mail->SMTPAuth = true;                   // Enable SMTP authentication
 $mail->Username = 'evsu.system23@gmail.com';          // SMTP username
 $mail->Password = 'mjohnoudzsbaufxc'; // SMTP password
-// $mail->Debug = 1;
-// Enable TLS encryption, ssl also accepted
-
-//$mail->addCC('kramcortes7@gmail.com');
 
 //SENDING OTP CODE WITH THIS PRESET INFORMATION
 $mail->SMTPSecure = 'tls';
