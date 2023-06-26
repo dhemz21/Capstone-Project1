@@ -5,7 +5,7 @@ session_start();
 // DATABASE CONNECTION 
 include_once 'database/db_conn.php';
 // LIBRARY CONNECTION
-require_once 'vendors/phpqrcode/qrlib.php';
+require_once 'assets/vendors/phpqrcode/qrlib.php';
 
 $query_lastID = 'SELECT * FROM 	registered_users ORDER BY UserID DESC LIMIT 1';
 $result_lastID = mysqli_query($conn, $query_lastID) or die(mysqli_error($conn));
@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
 	$fname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lname = $_POST['lastname'];
 	$mail = $_POST['email'];
 	$depart = $_POST['department'];
@@ -49,6 +50,7 @@ if (isset($_POST['submit'])) {
 	// GETTING THE SPECIFIC ROW FROM THE TBL_EMPLOYEE WHICH IS THE USER_ID AND INSERT TO TABLE REGISTERED_USERS
 	$registered_id = $row['UserID'];
 	$reg_fname = $row['firstname'];
+	$reg_mname = $row['middlename'];
 	$reg_lname = $row['lastname'];
 	$mail = $row['email'];
 	$depart = $row['department'];
@@ -81,8 +83,8 @@ if (isset($_POST['submit'])) {
 				QRcode::png($text, $file, 'L', 7, 2);
 		
 				//INSERTING THE DATA TO THE TABLE REGISTERED_USERS 
-				$sql = "INSERT INTO registered_users (Registered_ID, IDnumber, email, username, Firstname, Lastname, password, qrID, Department, login_type)
-			VALUES ('$registered_id ', '$idnumber', '$mail', 'none', '$reg_fname','$reg_lname','$hash','$qrIDText', '$depart', '$log_type')";
+				$sql = "INSERT INTO registered_users (Registered_ID, IDnumber, email, username, Firstname, Middlename, Lastname, password, qrID, Department, login_type)
+			VALUES ('$registered_id ', '$idnumber', '$mail', 'none', '$reg_fname', '$reg_mname', '$reg_lname','$hash','$qrIDText', '$depart', '$log_type')";
 	
 	}
 

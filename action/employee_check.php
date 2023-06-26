@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
                     $lname = $_SESSION['Lastname'] = $getData['Lastname'];
                     $depart = $_SESSION['Department'] = $getData['Department'];
                     $type = $_SESSION['login_type'] = $getData['login_type'];
-                    header("location: dashboard_employee/");
+                    header("location: dashboard/employee/");
                     exit(); // Stop further PHP execution
                 } else {
                     $_SESSION['validate'] = "unsuccessful";

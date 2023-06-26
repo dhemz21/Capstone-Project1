@@ -4,7 +4,7 @@ session_start();
 // DATABASE CONNECTION 
 require_once('database/db_conn.php');
 // LIBRARY CONNECTION
-include_once('vendors/phpqrcode/qrlib.php');
+include_once('assets/vendors/phpqrcode/qrlib.php');
 
 
 $query_lastID = 'SELECT * FROM 	registered_users ORDER BY UserID DESC LIMIT 1';
@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
 	// CREATE VARIABLE TO CATCH THE DATA FROM THE FORM
 	$idnumber = $_POST['IDnumber'];
 	$fname = $_POST['firstname'];
+	$mname = $_POST['middlename'];
 	$lname = $_POST['lastname'];
 	$mail = $_POST['email'];
 	$course = $_POST['course'];

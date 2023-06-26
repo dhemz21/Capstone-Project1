@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
                 // generate new session ID for the user
                 session_regenerate_id();
                 // ASSIGN THE VALUES OF EACH COLUMN IN THE RETURNED ROW TO DIFFERENT SESSION VARIABLES
-                $_SESSION['UserID'] = $getData['UserID'];
+                $_SESSION['incharge_id'] = $getData['incharge_id'];
                 $_SESSION['IDnumber'] = $getData['IDnumber'];
                 $_SESSION['firstname'] = $getData['firstname'];
                 $_SESSION['lastname'] = $getData['lastname'];
@@ -44,10 +44,10 @@ if(isset($_POST['submit'])){
                 $department = $getData['department'];
                 if($department == "COMPUTER STUDIES"){
                  // Redirect to Computer Studies dashboard
-                    header("location: dashboard_incharge/");
+                    header("location: dashboard_incharge/computer_studies/");
                 }elseif($department == "ENGINEERING"){
                     // Redirect to Engineering dashboard
-                    header("location: dashboard_incharge2/");
+                    header("location: dashboard_incharge/engineering/");
                 }
                 exit(); // Stop further PHP execution
             } else {

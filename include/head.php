@@ -13,20 +13,19 @@
     <!-- Custom Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
-
     <!-- Booststrap only -->
-    <link rel="stylesheet" href="dist/css/bootstrap.css">
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-
-    <!-- FontawesomeIcon online -->
-    <link rel="stylesheet" href="vendors/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
 
     <!-- sweetalert -->
-    <script src="dist/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="assets/dist/sweetalert2/sweetalert2.all.min.js"></script>
     <!-- Jquery -->
+
+    <!-- FontawesomeIcon online -->
+    <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css">
     
-    <script src="vendors/jquery/jquery.min.js"></script>
-    <script src="vendors/jquery/jquery.slim.min.js"></script>
+    <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/jquery/jquery.slim.min.js"></script>
 
     <!-- <script src="https://kit.fontawesome.com/eebafef846.js" crossorigin="anonymous"></script> -->
  

@@ -13,8 +13,8 @@
         ?>
         <!-- END -->
 
-      <!-- JavaScript Bundle with Popper -->
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="vendors/popper/popper.min.js"></script> -->
 </body>
 </html>

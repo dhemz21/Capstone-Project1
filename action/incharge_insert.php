@@ -5,13 +5,13 @@ session_start();
 // DATABASE CONNECTION 
 require('database/db_conn.php');
 
-$query_lastID = 'SELECT * FROM 	registered_incharge ORDER BY UserID DESC LIMIT 1';
+$query_lastID = 'SELECT * FROM 	registered_incharge ORDER BY incharge_id DESC LIMIT 1';
 $result_lastID = mysqli_query($conn, $query_lastID) or die(mysqli_error($conn));
 $totalID = 0;
 
 // GETTING THE LAST ID BEFORE INSERTING THE NEW ID
 while ($row = mysqli_fetch_assoc($result_lastID)) {
-	$totalID = $row['UserID'];
+	$totalID = $row['incharge_id'];
 }
 
 // LAST ID PLUS 1 FOR THE INSERTED ID

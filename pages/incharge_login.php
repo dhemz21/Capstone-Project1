@@ -82,6 +82,7 @@ session_start();
       </div>
     </section>
   </div>
+  <script src="js/form-validation.js"></script>
 
   <?php
     if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'inserted') {
