@@ -43,18 +43,18 @@ if (!$image_name) {
 
 
     // CHECK IF THE PROFILE FOLDER EXISTS, IF NOT CREATE IT
-    if (!file_exists('../assets/profile')) {
-        mkdir('profile', 0777, true);
+    if (!file_exists('../../src/private/profiles/')) {
+        mkdir('profiles', 0777, true);
     }
 
 
     // MOVE TE IMAGE TO THE PROFILE FOLDER
-    move_uploaded_file($image_temp, "../assets/profile/".$image);
+    move_uploaded_file($image_temp, "../../src/private/profiles/".$image);
 }
 
 // Query
 // UPDATING THE IMAGE IN THE registered_incharge TABLE
-$sql = mysqli_query($conn,"UPDATE registered_incharge SET profile_picture='$image' WHERE UserID = '$userID'");
+$sql = mysqli_query($conn,"UPDATE registered_incharge SET profile_picture='$image' WHERE incharge_id = '$ID'");
 
 $_SESSION['validate'] = "update";
 echo "<script>window.location.href='.?folder=pages/&page=admin-add-photo&success=1';</script>";

@@ -33,7 +33,7 @@ session_start();
               
               <div class="guest-form">
                 <div class="profile-image">
-                    <img src="assets/img/evsu.png" alt="">
+                    <img src="src/assets/img/evsu.png" alt="">
                 </div>
                 <div class="header-form">
                 <h4 class="card-title pb-2 text-center">Attendance Management System </h4>
@@ -43,12 +43,12 @@ session_start();
                 </div>
               <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=guest_regEmail" novalidate>
                 <div class="col-12">
-                     <label for="text" class="form-label">Email Address</label>
+                     <label for="email" class="form-label">Email Address</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-id-card"></i></span>
                     </div>
-                    <input name="email" type="text"class="input form-control rounded-0" id="email" placeholder="Enter your email address" required />
+                    <input name="email" type="text"class="input form-control rounded-0" id="email" autocomplete="email" placeholder="Enter your email address" required />
                   </div>
                 </div>
                 <div class="col-12">
@@ -66,8 +66,8 @@ session_start();
     </section>
   </div>
 
-  <script src="js/form-validation.js"></script>
-  <script src="js/form-validation.js"></script>
+  <script src="src/js/form-validation.js"></script>
+
 
   
   <?php

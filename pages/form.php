@@ -15,7 +15,7 @@
 
                 <div class="mainpage">
                     <div class="mainpage-image">
-                        <img src="assets/img/evsu.png" alt="">
+                        <img src="src/assets/img/evsu.png" alt="">
                     </div>
                     <div class="header-form">
                         <h4 class="card-title pb-2 text-center">Attendance Management System </h4>

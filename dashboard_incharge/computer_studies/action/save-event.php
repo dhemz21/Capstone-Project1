@@ -87,12 +87,12 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
     $file = md5(microtime()) . '.' . $file_ext;
 
     // Check if the files folder exists, if not create it
-    if (!file_exists('../assets/files')) {
+    if (!file_exists('../../src/private/files/')) {
         mkdir('files', 0777, true);
     }
 
     // Move the file to the files folder
-    move_uploaded_file($file_tmp, "../assets/files/".$file);
+    move_uploaded_file($file_tmp, "../../src/private/files/".$file);
 } else {
     // No file was uploaded
     $file = null;
@@ -110,7 +110,7 @@ foreach ($emails as $email) {
     $mail->Subject = $type;
     $mail->Body    = "To: $towho\nFrom: $from\nSubject: $subject\nVenue: $venue\nDate: $date\nAgenda: $agenda";
     if ($file) {
-        $mail->addAttachment('../assets/files/'.$file);
+        $mail->addAttachment('../../src/private/files/'.$file);
     }
     $mail->send();
     $mail->clearAddresses();

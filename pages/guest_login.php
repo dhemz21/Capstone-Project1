@@ -32,7 +32,7 @@ session_start();
               
               <div class="guest-form">
                 <div class="profile-image">
-                    <img src="assets/img/evsu.png" alt="">
+                    <img src="src/assets/img/evsu.png" alt="">
                 </div>
                 <div class="header-form">
                 <h4 class="card-title pb-2 text-center">Attendance Management System </h4>
@@ -82,7 +82,7 @@ session_start();
     </section>
   </div>
 
-  <script src="js/form-validation.js"></script>
+  <script src="src/js/form-validation.js"></script>
 
 
   <?php

@@ -33,7 +33,7 @@ session_start();
               
               <div class="incharge-form">
                 <div class="profile-image">
-                    <img src="assets/img/evsu.png" alt="">
+                    <img src="src/assets/img/evsu.png" alt="">
                 </div>
                 <div class="header-form">
                 <h4 class="card-title pb-2 text-center">Attendance Management System</h4>
@@ -43,7 +43,7 @@ session_start();
                 </div>
               <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=incharge_reset" novalidate>
                 <div class="col-12">
-                     <label for="text" class="form-label">Incharge ID</label>
+                     <label for="IDnumber" class="form-label">Incharge ID</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-id-card"></i></span>
@@ -66,7 +66,7 @@ session_start();
     </section>
   </div>
 
-  <script src="js/form-validation.js"></script>
+  <script src="src/js/form-validation.js"></script>
 
   <?php
   if (isset($_SESSION['validate']) && $_SESSION['validate'] != '') {

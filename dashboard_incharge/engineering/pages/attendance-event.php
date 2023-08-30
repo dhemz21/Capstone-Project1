@@ -3,7 +3,7 @@
   
 <?php
 
-include("../assets/library/attendance/call_function.php");
+include("../../src/libraries/attendance/call_function.php");
 require_once('action/generate.php');
 require_once("../../database/db_conn.php");
 
@@ -96,7 +96,7 @@ document.getElementById('generate').addEventListener('click', function() {
     var doc = new window.jspdf.jsPDF('portrait', 'pt', 'a4');
     // Add logo to the top of the document
     var logoImg = new Image();
-    logoImg.src = '../assets/img/evsu.png';
+    logoImg.src = '../../src/assets/img/evsu.png';
     logoImg.onload = function () {
     var canvas = document.createElement('canvas');
     canvas.width = logoImg.width;

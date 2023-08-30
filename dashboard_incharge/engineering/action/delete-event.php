@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $row = mysqli_fetch_assoc($result);
 
 // FILES FILE PATH
-$doc_file = "files/" . $row['file'];
+$doc_file = "../../src/private/files/" . $row['file'];
 
 // DELETING THE IMAGE FILE FROM LOCAL STORAGE IF THE IMAGE FILE EXISTS
 if (!empty($row['file'])) {

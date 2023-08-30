@@ -43,13 +43,13 @@ if (!$image_name) {
 
 
     // CHECK IF THE PROFILE FOLDER EXISTS, IF NOT CREATE IT
-    if (!file_exists('../assets/profile')) {
-        mkdir('profile', 0777, true);
+    if (!file_exists('../../src/private/profiles')) {
+        mkdir('profiles', 0777, true);
     }
 
 
     // MOVE TE IMAGE TO THE PROFILE FOLDER
-    move_uploaded_file($image_temp, "../assets/profile/".$image);
+    move_uploaded_file($image_temp, "../../src/private/profiles/".$image);
 }
 
 // Query

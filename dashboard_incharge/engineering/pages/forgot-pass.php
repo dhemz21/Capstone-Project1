@@ -29,7 +29,7 @@
                     <form action=".?folder=action/&page=update-password" method="POST" enctype="multipart/form-data">
 
                         <div class="profile-image">
-                            <img src="../assets/profile/<?php echo $image; ?>" alt="Profile Picture">
+                            <img src="../../src/private/profiles/<?php echo $image; ?>" alt="Profile Picture">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">

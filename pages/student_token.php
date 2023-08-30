@@ -33,7 +33,7 @@ session_start();
 
         <div class="student-form">
           <div class="profile-image">
-            <img src="assets/img/evsu.png" alt="evsu logo">
+            <img src="src/assets/img/evsu.png" alt="evsu logo">
           </div>
           <div class="header-form">
             <h4 class="card-title pb-2 text-center">Attendance Management System </h4>
@@ -44,7 +44,7 @@ session_start();
           <form class="row g-3 needs-validation" method="post" action=".?folder=action/&page=student_verify" novalidate>
           <input type="hidden" name="IDnumber">
             <div class="col-12">
-              <label for="text" class="form-label">One-Time Password</label>
+              <label for="otp" class="form-label">One-Time Password</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user-lock"></i></span>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include("../assets/library/call_function.php");
+include("../../src/library/call_function.php");
 require_once("../../database/db_conn.php");
 
 ?>
@@ -38,7 +38,7 @@ require_once("../../database/db_conn.php");
                   <td><?php echo $getData['eventSubject']; ?></td>
                   <td><?php echo $getData['venue']; ?></td>
                   <td><?php echo $getData['agenda']; ?></td>
-                  <td><a href="../../dashboard_incharge/assets/files/<?php echo $getData['file']; ?>" target="_blank"><?php echo basename($getData['file']); ?></a></td>
+                  <td><a href="../../src/private/files/<?php echo $getData['file']; ?>" target="_blank"><?php echo basename($getData['file']); ?></a></td>
                   <td><?php echo $getData['date']; ?></td>  
                 </tr>
               <?php } ?>

@@ -40,7 +40,7 @@ include_once('action/display-profile.php');
           <form action=".?folder=action/&page=update-student-info" method="POST" enctype="multipart/form-data">
 
             <div class="profile-image">
-              <img src="../assets/profile/<?php echo $image; ?>" alt="Profile Picture">
+              <img src="../../src/private/profiles/<?php echo $image; ?>" alt="Profile Picture">
             </div>
             <div class="btn-add">
               <a href=".?page=edit-student&UserID=<?php echo $getData['UserID']; ?>" class="btn text-white rounded-0 shadow-none" id="edit">Edit Profile</a>

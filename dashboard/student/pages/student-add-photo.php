@@ -49,7 +49,7 @@ include_once('action/display-profile.php');
             <div class="card-body">
                 <form action=".?folder=action/&page=save-student-photo" method="POST" enctype="multipart/form-data">
                     <div class="profile-image">
-                    <img src="../assets/profile/<?php echo $image; ?>" alt="Profile Picture">
+                    <img src="../../src/private/profiles/<?php echo $image; ?>" alt="Profile Picture">
                     </div>
 
                     <div class="image mb-2">

@@ -8,24 +8,24 @@
     <!-- WEBSITE TITLE -->
     <title>AMM-Information System</title>
     <!-- WEBSITE LOGO -->
-    <link rel="icon" href="assets/img/evsu.png">
+    <link rel="icon" href="src/assets/img/evsu.png">
 
     <!-- Custom Css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/assets/css/style.css">
     
     <!-- Booststrap only -->
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/assets/dist/css/bootstrap.min.css">
 
     <!-- sweetalert -->
-    <script src="assets/dist/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="src/plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <!-- Jquery -->
 
     <!-- FontawesomeIcon online -->
-    <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="src/plugins/fontawesome-free/css/all.min.css">
     
-    <script src="assets/vendors/jquery/jquery.min.js"></script>
-    <script src="assets/vendors/jquery/jquery.slim.min.js"></script>
+    <script src="src/plugins/jquery/jquery.min.js"></script>
+    <script src="src/plugins/jquery/jquery.slim.min.js"></script>
 
     <!-- <script src="https://kit.fontawesome.com/eebafef846.js" crossorigin="anonymous"></script> -->
  

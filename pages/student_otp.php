@@ -33,7 +33,7 @@ session_start();
 
         <div class="student-form">
           <div class="profile-image">
-            <img src="assets/img/evsu.png" alt="evsu logo">
+            <img src="src/assets/img/evsu.png" alt="evsu logo">
           </div>
           <div class="header-form">
             <h4 class="card-title pb-2 text-center">Attendance Management System </h4>
@@ -44,7 +44,7 @@ session_start();
           <form class="row g-3 needs-validation" method="POST" action=".?folder=action/&page=student_verify_otp" novalidate>
           <input type="hidden" name="IDnumber" class="input form-control rounded-0" >
             <div class="col-12">
-              <label for="text" class="form-label">One-Time Password</label>
+              <label for="otp" class="form-label">One-Time Password</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text rounded-0" id="basic-addon1"><i class="fa fa-user-lock"></i></span>
@@ -71,7 +71,7 @@ session_start();
   </section>
   </div>
 
-  <script src="js/form-validation.js"></script>
+  <script src="src/js/form-validation.js"></script>
 
   <?php
   if (isset($_SESSION['validate']) && $_SESSION['validate'] == 'successful') {

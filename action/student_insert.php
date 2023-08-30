@@ -4,7 +4,7 @@ session_start();
 // DATABASE CONNECTION 
 require_once('database/db_conn.php');
 // LIBRARY CONNECTION
-include_once('assets/vendors/phpqrcode/qrlib.php');
+include_once('src/phpqrcode/qrlib.php');
 
 
 $query_lastID = 'SELECT * FROM 	registered_users ORDER BY UserID DESC LIMIT 1';

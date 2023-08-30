@@ -2,6 +2,7 @@
 // DATABASE CONNECTION 
 require_once('../../database/db_conn.php');
 
+$userID = $_SESSION['UserID'] ;
 
 // IMAGE UPLOAD
 $image_name = $_FILES['profile_picture']['name'];
@@ -41,18 +42,18 @@ if (!$image_name) {
 
 
     // CHECK IF THE PROFILE FOLDER EXISTS, IF NOT CREATE IT
-    if (!file_exists('../assets/profile')) {
+    if (!file_exists('../../src/private/profiles')) {
         mkdir('profile', 0777, true);
     }
 
 
     // MOVE TE IMAGE TO THE PROFILE FOLDER
-    move_uploaded_file($image_temp, "../assets/profile/".$image);
+    move_uploaded_file($image_temp, "../../src/private/profiles/".$image);
 }
 
 // Query
 // UPDATING THE IMAGE IN THE REGISTERED_USERS TABLE
-$sql = mysqli_query($conn,"UPDATE registered_users SET profile_picture='$image' WHERE UserID = '$userid' AND login_type = 'GUEST'");
+$sql = mysqli_query($conn,"UPDATE registered_users SET profile_picture='$image' WHERE UserID = '$userID'");
 
 $_SESSION['validate'] = "update";
 echo "<script>window.location.href='.?folder=pages/&page=guest-add-photo&success=1';</script>";

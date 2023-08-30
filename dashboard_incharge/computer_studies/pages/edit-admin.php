@@ -45,7 +45,7 @@ include_once('action/display-profile.php');
                     ?>
 
                         <div class="profile-image">
-                            <img src="../assets/profile/<?php echo $image; ?>" alt="Profile Picture">
+                            <img src="../../src/private/profiles/<?php echo $image; ?>" alt="Profile Picture">
                         </div>
                         <div class="btn-add">
                             <a href=".?page=admin-add-photo" class="btn text-white" id="edit">Add Photo</a>

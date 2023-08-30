@@ -6,7 +6,7 @@ $(document).ready(function() {
         "National Peace Consiousness Month",
         "Intramurals",
         "Ratification of Constitution and By-Laws",
-        "World Teacher's Day",
+        "World Teachers Day",
         "Clean-Up Drive",
         "Team Building",
         "Yolanda Commemoration",

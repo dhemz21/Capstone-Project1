@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-danger elevation-4">
   <!-- Brand Logo -->
   <a href="index.php" class="brand-link">
-    <img src="../assets/img/evsu.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <img src="../../src/assets/img/evsu.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">EVSU-OC</span>
   </a>
 
@@ -13,7 +13,7 @@
       <?php
         include_once('action/display-profile.php');
         ?>
-        <img src="../assets/profile/<?php echo $image; ?>" alt="Add Photo">
+        <img src="../../src/private/profiles/<?php echo $image; ?>" alt="Add Photo">
       </div>
       <div class="info">
         <a href=".?page=admin-info" class="d-block"><?php echo $_SESSION['firstname'] ?> <?php echo $_SESSION['lastname'] ?></a>
